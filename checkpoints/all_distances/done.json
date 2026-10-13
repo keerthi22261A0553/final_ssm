@@ -1,0 +1,25 @@
+{
+  "distance": [
+    "2m",
+    "4m",
+    "6m",
+    "8m",
+    "10m",
+    "12m",
+    "14m",
+    "16m",
+    "18m",
+    "20m",
+    "22m",
+    "24m",
+    "26m",
+    "28m",
+    "30m"
+  ],
+  "run_name": "all_distances",
+  "best_epoch": 12,
+  "best_val_loss": 0.030233924920374394,
+  "best_val_acc": 0.9904583333333333,
+  "epochs_run": 19,
+  "split_fingerprint": "58d979ab22ac9e152ea2f3e11b69adf6226f0ef00116bdea425702171a951497"
+}

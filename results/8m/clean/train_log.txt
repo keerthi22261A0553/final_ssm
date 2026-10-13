@@ -1,0 +1,37 @@
+
+=== Distance 8m (clean) ===
+Loading data (train and validation files only)...
+  train: 1400 files, 22400 segments
+  val  : 300 files, 4800 segments
+  built in 25 s
+Model parameters: 129,812
+
+Epoch | Train loss  acc  | Val loss  acc   | LR      | Time  | Note
+    1 | 0.0199  0.9939 | 0.0076  0.9983 | 1.0e-03 |  273s | saved best
+    2 | 0.0063  0.9982 | 0.0307  0.9912 | 1.0e-03 |  261s | no improvement 1/7
+
+=== Distance 8m (clean) ===
+Loading data (train and validation files only)...
+  train: 1400 files, 22400 segments
+  val  : 300 files, 4800 segments
+  built in 20 s
+Model parameters: 129,812
+Resuming after epoch 2.
+
+Epoch | Train loss  acc  | Val loss  acc   | LR      | Time  | Note
+    3 | 0.0043  0.9990 | 0.0269  0.9890 | 1.0e-03 |  267s | no improvement 2/7
+    4 | 0.0019  0.9994 | 0.0085  0.9977 | 1.0e-03 |  261s | no improvement 3/7
+    5 | 0.0012  0.9997 | 0.0028  0.9988 | 5.0e-04 |  241s | saved best
+    6 | 0.0005  0.9999 | 0.0049  0.9990 | 5.0e-04 |  243s | no improvement 1/7
+    7 | 0.0003  0.9998 | 0.0022  0.9990 | 5.0e-04 |  241s | saved best
+    8 | 0.0000  1.0000 | 0.0039  0.9981 | 5.0e-04 |  243s | no improvement 1/7
+    9 | 0.0000  1.0000 | 0.0051  0.9981 | 5.0e-04 |  243s | no improvement 2/7
+   10 | 0.0000  1.0000 | 0.0035  0.9983 | 5.0e-04 |  247s | no improvement 3/7
+   11 | 0.0000  1.0000 | 0.0035  0.9983 | 2.5e-04 |  248s | no improvement 4/7
+   12 | 0.0000  1.0000 | 0.0047  0.9983 | 2.5e-04 |  244s | no improvement 5/7
+   13 | 0.0000  1.0000 | 0.0061  0.9981 | 2.5e-04 |  536s | no improvement 6/7
+   14 | 0.0000  1.0000 | 0.0042  0.9983 | 1.3e-04 |  975s | no improvement 7/7
+
+Early stopping after epoch 14.
+Best epoch 7: val loss 0.0022, val acc 0.9990
+Checkpoint: checkpoints/8m/clean/best.pt

@@ -1,0 +1,1043 @@
+
+============================================================
+2m noise-augmented  (0.0 h elapsed)
+============================================================
+
+>>> scripts\train.py --distances 2m --model noise_aug
+
+=== Distance 2m (noise_aug) ===
+Loading data (train and validation files only)...
+  noise augmentation on training files only: {'snr_range_db': [0, 30], 'clean_fraction': 0.25}
+  train: 1400 files, 22400 segments
+  val  : 300 files, 4800 segments
+  built in 25 s
+Model parameters: 129,812
+
+Epoch | Train loss  acc  | Val loss  acc   | LR      | Time  | Note
+    1 | 0.0441  0.9849 | 0.0011  1.0000 | 1.0e-03 |  291s | saved best
+    2 | 0.0097  0.9965 | 0.0004  1.0000 | 1.0e-03 |  261s | saved best
+    3 | 0.0119  0.9956 | 0.0005  1.0000 | 1.0e-03 |  254s | no improvement 1/7
+    4 | 0.0073  0.9975 | 0.0004  1.0000 | 1.0e-03 |  267s | no improvement 2/7
+    5 | 0.0076  0.9976 | 0.0014  0.9996 | 1.0e-03 |  269s | no improvement 3/7
+    6 | 0.0053  0.9980 | 0.0038  0.9985 | 5.0e-04 |  255s | no improvement 4/7
+    7 | 0.0082  0.9971 | 0.0002  1.0000 | 5.0e-04 |  261s | saved best
+    8 | 0.0062  0.9973 | 0.0005  1.0000 | 5.0e-04 |  248s | no improvement 1/7
+    9 | 0.0062  0.9977 | 0.0234  0.9915 | 5.0e-04 |  244s | no improvement 2/7
+   10 | 0.0054  0.9981 | 0.0015  0.9996 | 5.0e-04 |  246s | no improvement 3/7
+   11 | 0.0051  0.9985 | 0.0045  0.9985 | 2.5e-04 |  273s | no improvement 4/7
+   12 | 0.0048  0.9982 | 0.0567  0.9896 | 2.5e-04 |  287s | no improvement 5/7
+   13 | 0.0037  0.9986 | 0.0163  0.9967 | 2.5e-04 |  254s | no improvement 6/7
+   14 | 0.0034  0.9989 | 0.0183  0.9965 | 1.3e-04 |  250s | no improvement 7/7
+
+Early stopping after epoch 14.
+Best epoch 7: val loss 0.0002, val acc 1.0000
+Checkpoint: checkpoints/2m/noise_aug/best.pt
+
+>>> scripts\evaluate_clean.py --distances 2m --model noise_aug
+  2m: segments 1.0000 (F1 1.0000) | files 1.0000 (F1 1.0000)  -> results/2m/noise_aug/test_clean
+      per-class file recall: Inspire 2 1.000, Matrice 30 1.000, Mavic 2 Pro 1.000, Phantom 4 Pro 1.000
+
+>>> scripts\evaluate_noise.py --distances 2m --model noise_aug
+SNR levels: [20, 10, 5] dB   Denoiser: STFTWienerDenoiser(nperseg=256, noverlap=192, gain_floor=0.0)
+
+2m:
+   20 dB noisy   : segments 1.0000 (F1 1.0000) | files 1.0000 (F1 1.0000)
+   20 dB denoised: segments 0.9973 (F1 0.9973) | files 1.0000 (F1 1.0000)
+         same noisy input verified for 300 files  -> results/2m/noise_aug
+   10 dB noisy   : segments 0.9979 (F1 0.9979) | files 1.0000 (F1 1.0000)
+   10 dB denoised: segments 0.9988 (F1 0.9988) | files 1.0000 (F1 1.0000)
+         same noisy input verified for 300 files  -> results/2m/noise_aug
+    5 dB noisy   : segments 0.9938 (F1 0.9938) | files 1.0000 (F1 1.0000)
+    5 dB denoised: segments 0.9948 (F1 0.9948) | files 1.0000 (F1 1.0000)
+         same noisy input verified for 300 files  -> results/2m/noise_aug
+
+>>> scripts\make_report.py
+Conditions with results: 105 of 105
+Report: results/summary/final_results.md
+Tables and graphs: results/summary
+
+============================================================
+4m noise-augmented  (1.1 h elapsed)
+============================================================
+
+>>> scripts\train.py --distances 4m --model noise_aug
+
+=== Distance 4m (noise_aug) ===
+Loading data (train and validation files only)...
+  noise augmentation on training files only: {'snr_range_db': [0, 30], 'clean_fraction': 0.25}
+  train: 1400 files, 22400 segments
+  val  : 300 files, 4800 segments
+  built in 26 s
+Model parameters: 129,812
+
+Epoch | Train loss  acc  | Val loss  acc   | LR      | Time  | Note
+    1 | 0.0274  0.9922 | 0.0598  0.9779 | 1.0e-03 |  259s | saved best
+    2 | 0.0180  0.9950 | 0.3215  0.9256 | 1.0e-03 |  249s | no improvement 1/7
+    3 | 0.0052  0.9984 | 0.0047  0.9977 | 1.0e-03 |  237s | saved best
+    4 | 0.0086  0.9975 | 0.0568  0.9804 | 1.0e-03 |  247s | no improvement 1/7
+    5 | 0.0073  0.9978 | 0.1799  0.9523 | 1.0e-03 |  245s | no improvement 2/7
+    6 | 0.0045  0.9985 | 0.3116  0.9333 | 1.0e-03 |  251s | no improvement 3/7
+    7 | 0.0014  0.9994 | 0.1026  0.9696 | 5.0e-04 |  260s | no improvement 4/7
+    8 | 0.0020  0.9992 | 0.0336  0.9890 | 5.0e-04 |  247s | no improvement 5/7
+    9 | 0.0036  0.9988 | 0.0326  0.9890 | 5.0e-04 |  246s | no improvement 6/7
+   10 | 0.0026  0.9992 | 0.0142  0.9956 | 2.5e-04 |  248s | no improvement 7/7
+
+Early stopping after epoch 10.
+Best epoch 3: val loss 0.0047, val acc 0.9977
+Checkpoint: checkpoints/4m/noise_aug/best.pt
+
+>>> scripts\evaluate_clean.py --distances 4m --model noise_aug
+  4m: segments 1.0000 (F1 1.0000) | files 1.0000 (F1 1.0000)  -> results/4m/noise_aug/test_clean
+      per-class file recall: Inspire 2 1.000, Matrice 30 1.000, Mavic 2 Pro 1.000, Phantom 4 Pro 1.000
+
+>>> scripts\evaluate_noise.py --distances 4m --model noise_aug
+SNR levels: [20, 10, 5] dB   Denoiser: STFTWienerDenoiser(nperseg=256, noverlap=192, gain_floor=0.0)
+
+4m:
+   20 dB noisy   : segments 0.9998 (F1 0.9998) | files 1.0000 (F1 1.0000)
+   20 dB denoised: segments 0.9825 (F1 0.9824) | files 1.0000 (F1 1.0000)
+         same noisy input verified for 300 files  -> results/4m/noise_aug
+   10 dB noisy   : segments 0.9790 (F1 0.9790) | files 0.9967 (F1 0.9967)
+   10 dB denoised: segments 0.9975 (F1 0.9975) | files 1.0000 (F1 1.0000)
+         same noisy input verified for 300 files  -> results/4m/noise_aug
+    5 dB noisy   : segments 0.8502 (F1 0.8380) | files 0.8233 (F1 0.7981)
+    5 dB denoised: segments 0.9556 (F1 0.9553) | files 0.9933 (F1 0.9933)
+         same noisy input verified for 300 files  -> results/4m/noise_aug
+
+>>> scripts\make_report.py
+Conditions with results: 105 of 105
+Report: results/summary/final_results.md
+Tables and graphs: results/summary
+
+============================================================
+6m noise-augmented  (1.8 h elapsed)
+============================================================
+
+>>> scripts\train.py --distances 6m --model noise_aug
+
+=== Distance 6m (noise_aug) ===
+Loading data (train and validation files only)...
+  noise augmentation on training files only: {'snr_range_db': [0, 30], 'clean_fraction': 0.25}
+  train: 1400 files, 22400 segments
+  val  : 300 files, 4800 segments
+  built in 24 s
+Model parameters: 129,812
+
+Epoch | Train loss  acc  | Val loss  acc   | LR      | Time  | Note
+    1 | 0.0661  0.9770 | 0.5879  0.8635 | 1.0e-03 |  252s | saved best
+    2 | 0.0351  0.9883 | 0.2928  0.9079 | 1.0e-03 |  254s | saved best
+    3 | 0.0246  0.9913 | 0.3054  0.9225 | 1.0e-03 |  257s | no improvement 1/7
+    4 | 0.0246  0.9912 | 0.4087  0.8908 | 1.0e-03 |  261s | no improvement 2/7
+    5 | 0.0212  0.9922 | 0.3100  0.9231 | 1.0e-03 |  280s | no improvement 3/7
+    6 | 0.0146  0.9947 | 0.2691  0.9283 | 5.0e-04 |  248s | saved best
+    7 | 0.0144  0.9950 | 0.3026  0.9244 | 5.0e-04 |  258s | no improvement 1/7
+    8 | 0.0134  0.9953 | 0.1703  0.9548 | 5.0e-04 |  254s | saved best
+    9 | 0.0177  0.9936 | 0.0713  0.9756 | 5.0e-04 |  247s | saved best
+   10 | 0.0146  0.9946 | 0.1821  0.9513 | 5.0e-04 |  252s | no improvement 1/7
+   11 | 0.0166  0.9940 | 0.5366  0.8746 | 5.0e-04 |  249s | no improvement 2/7
+   12 | 0.0145  0.9953 | 0.3017  0.9275 | 5.0e-04 |  247s | no improvement 3/7
+   13 | 0.0168  0.9938 | 0.1508  0.9502 | 2.5e-04 |  242s | no improvement 4/7
+   14 | 0.0142  0.9948 | 0.2192  0.9398 | 2.5e-04 |  243s | no improvement 5/7
+   15 | 0.0089  0.9967 | 0.1163  0.9587 | 2.5e-04 |  255s | no improvement 6/7
+   16 | 0.0112  0.9966 | 0.2603  0.9294 | 1.3e-04 |  253s | no improvement 7/7
+
+Early stopping after epoch 16.
+Best epoch 9: val loss 0.0713, val acc 0.9756
+Checkpoint: checkpoints/6m/noise_aug/best.pt
+
+>>> scripts\evaluate_clean.py --distances 6m --model noise_aug
+  6m: segments 0.9154 (F1 0.9117) | files 0.9300 (F1 0.9286)  -> results/6m/noise_aug/test_clean
+      per-class file recall: Inspire 2 1.000, Matrice 30 1.000, Mavic 2 Pro 1.000, Phantom 4 Pro 0.720
+
+>>> scripts\evaluate_noise.py --distances 6m --model noise_aug
+SNR levels: [20, 10, 5] dB   Denoiser: STFTWienerDenoiser(nperseg=256, noverlap=192, gain_floor=0.0)
+
+6m:
+   20 dB noisy   : segments 0.9217 (F1 0.9186) | files 0.9367 (F1 0.9353)
+   20 dB denoised: segments 0.8592 (F1 0.8569) | files 0.9067 (F1 0.9037)
+         same noisy input verified for 300 files  -> results/6m/noise_aug
+   10 dB noisy   : segments 0.9115 (F1 0.9067) | files 0.9300 (F1 0.9273)
+   10 dB denoised: segments 0.9419 (F1 0.9413) | files 0.9800 (F1 0.9800)
+         same noisy input verified for 300 files  -> results/6m/noise_aug
+    5 dB noisy   : segments 0.8796 (F1 0.8701) | files 0.9000 (F1 0.8926)
+    5 dB denoised: segments 0.9221 (F1 0.9211) | files 0.9833 (F1 0.9833)
+         same noisy input verified for 300 files  -> results/6m/noise_aug
+
+>>> scripts\make_report.py
+Conditions with results: 105 of 105
+Report: results/summary/final_results.md
+Tables and graphs: results/summary
+
+============================================================
+8m noise-augmented  (3.0 h elapsed)
+============================================================
+
+>>> scripts\train.py --distances 8m --model noise_aug
+
+=== Distance 8m (noise_aug) ===
+Loading data (train and validation files only)...
+  noise augmentation on training files only: {'snr_range_db': [0, 30], 'clean_fraction': 0.25}
+  train: 1400 files, 22400 segments
+  val  : 300 files, 4800 segments
+  built in 24 s
+Model parameters: 129,812
+
+Epoch | Train loss  acc  | Val loss  acc   | LR      | Time  | Note
+    1 | 0.0258  0.9918 | 0.0015  0.9998 | 1.0e-03 |  258s | saved best
+    2 | 0.0087  0.9973 | 0.0607  0.9769 | 1.0e-03 |  263s | no improvement 1/7
+    3 | 0.0064  0.9977 | 0.0008  1.0000 | 1.0e-03 |  258s | saved best
+    4 | 0.0065  0.9979 | 0.0078  0.9975 | 1.0e-03 |  257s | no improvement 1/7
+    5 | 0.0087  0.9977 | 0.0097  0.9971 | 1.0e-03 |  257s | no improvement 2/7
+    6 | 0.0026  0.9992 | 0.0177  0.9958 | 1.0e-03 |  322s | no improvement 3/7
+    7 | 0.0028  0.9992 | 0.0018  0.9994 | 5.0e-04 |  282s | no improvement 4/7
+    8 | 0.0011  0.9996 | 0.0012  0.9994 | 5.0e-04 |  273s | no improvement 5/7
+    9 | 0.0016  0.9995 | 0.0000  1.0000 | 5.0e-04 |  277s | saved best
+   10 | 0.0031  0.9990 | 0.0007  1.0000 | 5.0e-04 |  268s | no improvement 1/7
+   11 | 0.0024  0.9992 | 0.0126  0.9962 | 5.0e-04 |  268s | no improvement 2/7
+   12 | 0.0010  0.9997 | 0.0110  0.9960 | 5.0e-04 |  292s | no improvement 3/7
+   13 | 0.0017  0.9996 | 0.0042  0.9981 | 2.5e-04 |  292s | no improvement 4/7
+   14 | 0.0006  0.9998 | 0.0001  1.0000 | 2.5e-04 |  298s | no improvement 5/7
+   15 | 0.0009  0.9998 | 0.0005  0.9998 | 2.5e-04 |  259s | no improvement 6/7
+   16 | 0.0007  0.9999 | 0.0032  0.9983 | 1.3e-04 |  257s | no improvement 7/7
+
+Early stopping after epoch 16.
+Best epoch 9: val loss 0.0000, val acc 1.0000
+Checkpoint: checkpoints/8m/noise_aug/best.pt
+
+>>> scripts\evaluate_clean.py --distances 8m --model noise_aug
+  8m: segments 0.9927 (F1 0.9927) | files 0.9967 (F1 0.9967)  -> results/8m/noise_aug/test_clean
+      per-class file recall: Inspire 2 1.000, Matrice 30 1.000, Mavic 2 Pro 1.000, Phantom 4 Pro 0.987
+
+>>> scripts\evaluate_noise.py --distances 8m --model noise_aug
+SNR levels: [20, 10, 5] dB   Denoiser: STFTWienerDenoiser(nperseg=256, noverlap=192, gain_floor=0.0)
+
+8m:
+   20 dB noisy   : segments 0.9910 (F1 0.9910) | files 0.9967 (F1 0.9967)
+   20 dB denoised: segments 0.8081 (F1 0.7754) | files 0.7633 (F1 0.6950)
+         same noisy input verified for 300 files  -> results/8m/noise_aug
+   10 dB noisy   : segments 0.9769 (F1 0.9768) | files 0.9767 (F1 0.9766)
+   10 dB denoised: segments 0.8731 (F1 0.8645) | files 0.8800 (F1 0.8727)
+         same noisy input verified for 300 files  -> results/8m/noise_aug
+    5 dB noisy   : segments 0.9629 (F1 0.9625) | files 0.9667 (F1 0.9666)
+    5 dB denoised: segments 0.8944 (F1 0.8900) | files 0.9300 (F1 0.9286)
+         same noisy input verified for 300 files  -> results/8m/noise_aug
+
+>>> scripts\make_report.py
+Conditions with results: 105 of 105
+Report: results/summary/final_results.md
+Tables and graphs: results/summary
+
+============================================================
+10m noise-augmented  (4.3 h elapsed)
+============================================================
+
+>>> scripts\train.py --distances 10m --model noise_aug
+
+=== Distance 10m (noise_aug) ===
+Loading data (train and validation files only)...
+  noise augmentation on training files only: {'snr_range_db': [0, 30], 'clean_fraction': 0.25}
+  train: 1400 files, 22400 segments
+  val  : 300 files, 4800 segments
+  built in 24 s
+Model parameters: 129,812
+
+Epoch | Train loss  acc  | Val loss  acc   | LR      | Time  | Note
+    1 | 0.0271  0.9911 | 0.1581  0.9390 | 1.0e-03 |  259s | saved best
+    2 | 0.0089  0.9967 | 1.1125  0.8569 | 1.0e-03 |  278s | no improvement 1/7
+    3 | 0.0038  0.9988 | 0.5327  0.8933 | 1.0e-03 |  309s | no improvement 2/7
+    4 | 0.0104  0.9965 | 0.6922  0.8744 | 1.0e-03 |  300s | no improvement 3/7
+    5 | 0.0017  0.9994 | 0.9723  0.8688 | 5.0e-04 |  272s | no improvement 4/7
+    6 | 0.0031  0.9989 | 1.0154  0.8725 | 5.0e-04 |  286s | no improvement 5/7
+    7 | 0.0037  0.9987 | 0.6187  0.8888 | 5.0e-04 |  253s | no improvement 6/7
+    8 | 0.0028  0.9988 | 0.8366  0.8792 | 2.5e-04 |  253s | no improvement 7/7
+
+Early stopping after epoch 8.
+Best epoch 1: val loss 0.1581, val acc 0.9390
+Checkpoint: checkpoints/10m/noise_aug/best.pt
+
+>>> scripts\evaluate_clean.py --distances 10m --model noise_aug
+ 10m: segments 0.9021 (F1 0.8988) | files 0.9000 (F1 0.8964)  -> results/10m/noise_aug/test_clean
+      per-class file recall: Inspire 2 1.000, Matrice 30 1.000, Mavic 2 Pro 0.987, Phantom 4 Pro 0.613
+
+>>> scripts\evaluate_noise.py --distances 10m --model noise_aug
+SNR levels: [20, 10, 5] dB   Denoiser: STFTWienerDenoiser(nperseg=256, noverlap=192, gain_floor=0.0)
+
+10m:
+   20 dB noisy   : segments 0.8865 (F1 0.8812) | files 0.8833 (F1 0.8774)
+   20 dB denoised: segments 0.7500 (F1 0.6667) | files 0.7500 (F1 0.6667)
+         same noisy input verified for 300 files  -> results/10m/noise_aug
+   10 dB noisy   : segments 0.7871 (F1 0.7463) | files 0.7900 (F1 0.7484)
+   10 dB denoised: segments 0.7502 (F1 0.6671) | files 0.7500 (F1 0.6667)
+         same noisy input verified for 300 files  -> results/10m/noise_aug
+    5 dB noisy   : segments 0.7087 (F1 0.6487) | files 0.7300 (F1 0.6575)
+    5 dB denoised: segments 0.7504 (F1 0.6676) | files 0.7500 (F1 0.6667)
+         same noisy input verified for 300 files  -> results/10m/noise_aug
+
+>>> scripts\make_report.py
+Conditions with results: 105 of 105
+Report: results/summary/final_results.md
+Tables and graphs: results/summary
+
+============================================================
+12m noise-augmented  (4.9 h elapsed)
+============================================================
+
+>>> scripts\train.py --distances 12m --model noise_aug
+
+=== Distance 12m (noise_aug) ===
+Loading data (train and validation files only)...
+  noise augmentation on training files only: {'snr_range_db': [0, 30], 'clean_fraction': 0.25}
+  train: 1400 files, 22400 segments
+  val  : 300 files, 4800 segments
+  built in 24 s
+Model parameters: 129,812
+
+Epoch | Train loss  acc  | Val loss  acc   | LR      | Time  | Note
+    1 | 0.0072  0.9985 | 1.5216  0.8258 | 1.0e-03 |  251s | saved best
+    2 | 0.0001  1.0000 | 1.6115  0.8292 | 1.0e-03 |  261s | no improvement 1/7
+    3 | 0.0000  1.0000 | 1.7226  0.8273 | 1.0e-03 |  256s | no improvement 2/7
+    4 | 0.0000  1.0000 | 1.7518  0.8287 | 1.0e-03 |  251s | no improvement 3/7
+    5 | 0.0000  1.0000 | 1.7958  0.8287 | 5.0e-04 |  260s | no improvement 4/7
+    6 | 0.0000  1.0000 | 1.8489  0.8269 | 5.0e-04 |  256s | no improvement 5/7
+    7 | 0.0000  1.0000 | 1.9116  0.8265 | 5.0e-04 |  248s | no improvement 6/7
+    8 | 0.0000  1.0000 | 1.9152  0.8269 | 2.5e-04 |  247s | no improvement 7/7
+
+Early stopping after epoch 8.
+Best epoch 1: val loss 1.5216, val acc 0.8258
+Checkpoint: checkpoints/12m/noise_aug/best.pt
+
+>>> scripts\evaluate_clean.py --distances 12m --model noise_aug
+ 12m: segments 0.6856 (F1 0.6240) | files 0.6867 (F1 0.6233)  -> results/12m/noise_aug/test_clean
+      per-class file recall: Inspire 2 0.747, Matrice 30 1.000, Mavic 2 Pro 1.000, Phantom 4 Pro 0.000
+
+>>> scripts\evaluate_noise.py --distances 12m --model noise_aug
+SNR levels: [20, 10, 5] dB   Denoiser: STFTWienerDenoiser(nperseg=256, noverlap=192, gain_floor=0.0)
+
+12m:
+   20 dB noisy   : segments 0.6777 (F1 0.6157) | files 0.6767 (F1 0.6165)
+   20 dB denoised: segments 0.5135 (F1 0.4053) | files 0.5000 (F1 0.3750)
+         same noisy input verified for 300 files  -> results/12m/noise_aug
+   10 dB noisy   : segments 0.6306 (F1 0.5783) | files 0.6400 (F1 0.5856)
+   10 dB denoised: segments 0.7298 (F1 0.6550) | files 0.7433 (F1 0.6637)
+         same noisy input verified for 300 files  -> results/12m/noise_aug
+    5 dB noisy   : segments 0.5756 (F1 0.5313) | files 0.5767 (F1 0.5340)
+    5 dB denoised: segments 0.7146 (F1 0.6461) | files 0.7133 (F1 0.6477)
+         same noisy input verified for 300 files  -> results/12m/noise_aug
+
+>>> scripts\make_report.py
+Conditions with results: 105 of 105
+Report: results/summary/final_results.md
+Tables and graphs: results/summary
+
+============================================================
+14m noise-augmented  (5.5 h elapsed)
+============================================================
+
+>>> scripts\train.py --distances 14m --model noise_aug
+
+=== Distance 14m (noise_aug) ===
+Loading data (train and validation files only)...
+  noise augmentation on training files only: {'snr_range_db': [0, 30], 'clean_fraction': 0.25}
+  train: 1400 files, 22400 segments
+  val  : 300 files, 4800 segments
+  built in 24 s
+Model parameters: 129,812
+
+Epoch | Train loss  acc  | Val loss  acc   | LR      | Time  | Note
+    1 | 0.0865  0.9649 | 0.8765  0.8523 | 1.0e-03 |  252s | saved best
+    2 | 0.0443  0.9833 | 0.6624  0.8977 | 1.0e-03 |  271s | saved best
+    3 | 0.0310  0.9888 | 0.7294  0.8954 | 1.0e-03 |  278s | no improvement 1/7
+    4 | 0.0277  0.9892 | 0.8607  0.8985 | 1.0e-03 |  277s | no improvement 2/7
+    5 | 0.0309  0.9879 | 0.9220  0.8919 | 1.0e-03 |  323s | no improvement 3/7
+    6 | 0.0232  0.9907 | 0.7074  0.9019 | 5.0e-04 |  288s | no improvement 4/7
+    7 | 0.0183  0.9930 | 0.5283  0.9010 | 5.0e-04 |  249s | saved best
+    8 | 0.0192  0.9924 | 0.7057  0.8742 | 5.0e-04 |  248s | no improvement 1/7
+    9 | 0.0142  0.9943 | 0.7302  0.8788 | 5.0e-04 |  248s | no improvement 2/7
+   10 | 0.0189  0.9927 | 0.5294  0.9062 | 5.0e-04 |  249s | no improvement 3/7
+   11 | 0.0170  0.9936 | 0.7492  0.8906 | 2.5e-04 |  247s | no improvement 4/7
+   12 | 0.0173  0.9933 | 0.7258  0.9050 | 2.5e-04 |  248s | no improvement 5/7
+   13 | 0.0166  0.9937 | 0.8550  0.9025 | 2.5e-04 |  259s | no improvement 6/7
+   14 | 0.0130  0.9956 | 0.7373  0.9023 | 1.3e-04 |  324s | no improvement 7/7
+
+Early stopping after epoch 14.
+Best epoch 7: val loss 0.5283, val acc 0.9010
+Checkpoint: checkpoints/14m/noise_aug/best.pt
+
+>>> scripts\evaluate_clean.py --distances 14m --model noise_aug
+ 14m: segments 0.6402 (F1 0.5853) | files 0.6433 (F1 0.5887)  -> results/14m/noise_aug/test_clean
+      per-class file recall: Inspire 2 1.000, Matrice 30 1.000, Mavic 2 Pro 0.000, Phantom 4 Pro 0.573
+
+>>> scripts\evaluate_noise.py --distances 14m --model noise_aug
+SNR levels: [20, 10, 5] dB   Denoiser: STFTWienerDenoiser(nperseg=256, noverlap=192, gain_floor=0.0)
+
+14m:
+   20 dB noisy   : segments 0.6181 (F1 0.5693) | files 0.6233 (F1 0.5727)
+   20 dB denoised: segments 0.7252 (F1 0.6476) | files 0.7400 (F1 0.6594)
+         same noisy input verified for 300 files  -> results/14m/noise_aug
+   10 dB noisy   : segments 0.5413 (F1 0.5095) | files 0.5233 (F1 0.5069)
+   10 dB denoised: segments 0.5908 (F1 0.5563) | files 0.5633 (F1 0.5420)
+         same noisy input verified for 300 files  -> results/14m/noise_aug
+    5 dB noisy   : segments 0.5152 (F1 0.4826) | files 0.5133 (F1 0.4996)
+    5 dB denoised: segments 0.5229 (F1 0.4876) | files 0.5133 (F1 0.4891)
+         same noisy input verified for 300 files  -> results/14m/noise_aug
+
+>>> scripts\make_report.py
+Conditions with results: 105 of 105
+Report: results/summary/final_results.md
+Tables and graphs: results/summary
+
+============================================================
+16m noise-augmented  (6.7 h elapsed)
+============================================================
+
+>>> scripts\train.py --distances 16m --model noise_aug
+
+=== Distance 16m (noise_aug) ===
+Loading data (train and validation files only)...
+  noise augmentation on training files only: {'snr_range_db': [0, 30], 'clean_fraction': 0.25}
+  train: 1400 files, 22400 segments
+  val  : 300 files, 4800 segments
+  built in 27 s
+Model parameters: 129,812
+
+Epoch | Train loss  acc  | Val loss  acc   | LR      | Time  | Note
+    1 | 0.0137  0.9958 | 0.0016  0.9994 | 1.0e-03 |  305s | saved best
+    2 | 0.0050  0.9985 | 0.0007  0.9998 | 1.0e-03 |  301s | saved best
+    3 | 0.0050  0.9986 | 0.0156  0.9956 | 1.0e-03 |  294s | no improvement 1/7
+    4 | 0.0006  0.9998 | 0.0032  0.9994 | 1.0e-03 |  287s | no improvement 2/7
+    5 | 0.0004  0.9998 | 0.0006  0.9998 | 1.0e-03 |  293s | no improvement 3/7
+    6 | 0.0019  0.9995 | 0.0028  0.9994 | 1.0e-03 |  299s | no improvement 4/7
+    7 | 0.0010  0.9996 | 0.0028  0.9994 | 1.0e-03 |  274s | no improvement 5/7
+    8 | 0.0013  0.9996 | 0.0004  0.9998 | 1.0e-03 |  252s | saved best
+    9 | 0.0018  0.9993 | 0.0001  1.0000 | 1.0e-03 | 56431s | saved best
+   10 | 0.0005  0.9998 | 0.0018  0.9994 | 1.0e-03 |  293s | no improvement 1/7
+   11 | 0.0000  1.0000 | 0.0005  0.9998 | 1.0e-03 |  256s | no improvement 2/7
+   12 | 0.0014  0.9995 | 0.0097  0.9979 | 1.0e-03 |  249s | no improvement 3/7
+   13 | 0.0013  0.9995 | 0.0068  0.9985 | 5.0e-04 |  253s | no improvement 4/7
+   14 | 0.0002  0.9999 | 0.0005  0.9998 | 5.0e-04 |  244s | no improvement 5/7
+   15 | 0.0003  0.9999 | 0.0003  0.9998 | 5.0e-04 |  260s | no improvement 6/7
+   16 | 0.0003  1.0000 | 0.0000  1.0000 | 2.5e-04 |  251s | no improvement 7/7
+
+Early stopping after epoch 16.
+Best epoch 9: val loss 0.0001, val acc 1.0000
+Checkpoint: checkpoints/16m/noise_aug/best.pt
+
+>>> scripts\evaluate_clean.py --distances 16m --model noise_aug
+ 16m: segments 0.9979 (F1 0.9979) | files 1.0000 (F1 1.0000)  -> results/16m/noise_aug/test_clean
+      per-class file recall: Inspire 2 1.000, Matrice 30 1.000, Mavic 2 Pro 1.000, Phantom 4 Pro 1.000
+
+>>> scripts\evaluate_noise.py --distances 16m --model noise_aug
+SNR levels: [20, 10, 5] dB   Denoiser: STFTWienerDenoiser(nperseg=256, noverlap=192, gain_floor=0.0)
+
+16m:
+   20 dB noisy   : segments 0.9948 (F1 0.9948) | files 1.0000 (F1 1.0000)
+   20 dB denoised: segments 0.8731 (F1 0.8594) | files 0.9167 (F1 0.9115)
+         same noisy input verified for 300 files  -> results/16m/noise_aug
+   10 dB noisy   : segments 0.9819 (F1 0.9817) | files 0.9833 (F1 0.9832)
+   10 dB denoised: segments 0.9704 (F1 0.9700) | files 0.9900 (F1 0.9900)
+         same noisy input verified for 300 files  -> results/16m/noise_aug
+    5 dB noisy   : segments 0.9306 (F1 0.9283) | files 0.9567 (F1 0.9561)
+    5 dB denoised: segments 0.9640 (F1 0.9642) | files 0.9933 (F1 0.9933)
+         same noisy input verified for 300 files  -> results/16m/noise_aug
+
+>>> scripts\make_report.py
+Conditions with results: 105 of 105
+Report: results/summary/final_results.md
+Tables and graphs: results/summary
+
+============================================================
+18m noise-augmented  (23.5 h elapsed)
+============================================================
+
+>>> scripts\train.py --distances 18m --model noise_aug
+
+=== Distance 18m (noise_aug) ===
+Loading data (train and validation files only)...
+  noise augmentation on training files only: {'snr_range_db': [0, 30], 'clean_fraction': 0.25}
+  train: 1400 files, 22400 segments
+  val  : 300 files, 4800 segments
+  built in 24 s
+Model parameters: 129,812
+
+Epoch | Train loss  acc  | Val loss  acc   | LR      | Time  | Note
+    1 | 0.0069  0.9982 | 0.5190  0.9444 | 1.0e-03 |  257s | saved best
+    2 | 0.0045  0.9989 | 0.4366  0.9487 | 1.0e-03 |  258s | saved best
+    3 | 0.0001  1.0000 | 0.4946  0.9487 | 1.0e-03 |  299s | no improvement 1/7
+    4 | 0.0000  1.0000 | 0.5270  0.9487 | 1.0e-03 |  351s | no improvement 2/7
+    5 | 0.0000  1.0000 | 0.5588  0.9485 | 1.0e-03 |  293s | no improvement 3/7
+    6 | 0.0000  1.0000 | 0.5762  0.9481 | 5.0e-04 |  283s | no improvement 4/7
+    7 | 0.0001  1.0000 | 0.5214  0.9475 | 5.0e-04 |  300s | no improvement 5/7
+    8 | 0.0000  1.0000 | 0.5720  0.9469 | 5.0e-04 |  277s | no improvement 6/7
+    9 | 0.0000  1.0000 | 0.6154  0.9425 | 2.5e-04 |  277s | no improvement 7/7
+
+Early stopping after epoch 9.
+Best epoch 2: val loss 0.4366, val acc 0.9487
+Checkpoint: checkpoints/18m/noise_aug/best.pt
+
+>>> scripts\evaluate_clean.py --distances 18m --model noise_aug
+ 18m: segments 0.8377 (F1 0.8186) | files 0.8367 (F1 0.8172)  -> results/18m/noise_aug/test_clean
+      per-class file recall: Inspire 2 0.347, Matrice 30 1.000, Mavic 2 Pro 1.000, Phantom 4 Pro 1.000
+
+>>> scripts\evaluate_noise.py --distances 18m --model noise_aug
+SNR levels: [20, 10, 5] dB   Denoiser: STFTWienerDenoiser(nperseg=256, noverlap=192, gain_floor=0.0)
+
+18m:
+   20 dB noisy   : segments 0.8365 (F1 0.8169) | files 0.8367 (F1 0.8172)
+   20 dB denoised: segments 0.9331 (F1 0.9319) | files 0.9367 (F1 0.9356)
+         same noisy input verified for 300 files  -> results/18m/noise_aug
+   10 dB noisy   : segments 0.8252 (F1 0.8009) | files 0.8300 (F1 0.8078)
+   10 dB denoised: segments 0.8831 (F1 0.8765) | files 0.8933 (F1 0.8882)
+         same noisy input verified for 300 files  -> results/18m/noise_aug
+    5 dB noisy   : segments 0.7981 (F1 0.7588) | files 0.7933 (F1 0.7508)
+    5 dB denoised: segments 0.8606 (F1 0.8494) | files 0.8633 (F1 0.8523)
+         same noisy input verified for 300 files  -> results/18m/noise_aug
+
+>>> scripts\make_report.py
+Conditions with results: 105 of 105
+Report: results/summary/final_results.md
+Tables and graphs: results/summary
+
+============================================================
+20m noise-augmented  (24.3 h elapsed)
+============================================================
+
+>>> scripts\train.py --distances 20m --model noise_aug
+
+=== Distance 20m (noise_aug) ===
+Loading data (train and validation files only)...
+  noise augmentation on training files only: {'snr_range_db': [0, 30], 'clean_fraction': 0.25}
+  train: 1400 files, 22400 segments
+  val  : 300 files, 4800 segments
+  built in 25 s
+Model parameters: 129,812
+
+Epoch | Train loss  acc  | Val loss  acc   | LR      | Time  | Note
+    1 | 0.0076  0.9979 | 0.0001  1.0000 | 1.0e-03 |  271s | saved best
+    2 | 0.0001  1.0000 | 0.0000  1.0000 | 1.0e-03 |  272s | no improvement 1/7
+    3 | 0.0000  1.0000 | 0.0000  1.0000 | 1.0e-03 |  254s | no improvement 2/7
+    4 | 0.0000  1.0000 | 0.0000  1.0000 | 1.0e-03 |  270s | no improvement 3/7
+    5 | 0.0030  0.9993 | 0.0000  1.0000 | 1.0e-03 |  253s | no improvement 4/7
+    6 | 0.0000  1.0000 | 0.0000  1.0000 | 1.0e-03 |  253s | no improvement 5/7
+    7 | 0.0002  0.9999 | 0.0000  1.0000 | 1.0e-03 |  258s | no improvement 6/7
+    8 | 0.0000  1.0000 | 0.0000  1.0000 | 5.0e-04 |  265s | no improvement 7/7
+
+Early stopping after epoch 8.
+Best epoch 1: val loss 0.0001, val acc 1.0000
+Checkpoint: checkpoints/20m/noise_aug/best.pt
+
+>>> scripts\evaluate_clean.py --distances 20m --model noise_aug
+ 20m: segments 1.0000 (F1 1.0000) | files 1.0000 (F1 1.0000)  -> results/20m/noise_aug/test_clean
+      per-class file recall: Inspire 2 1.000, Matrice 30 1.000, Mavic 2 Pro 1.000, Phantom 4 Pro 1.000
+
+>>> scripts\evaluate_noise.py --distances 20m --model noise_aug
+SNR levels: [20, 10, 5] dB   Denoiser: STFTWienerDenoiser(nperseg=256, noverlap=192, gain_floor=0.0)
+
+20m:
+   20 dB noisy   : segments 1.0000 (F1 1.0000) | files 1.0000 (F1 1.0000)
+   20 dB denoised: segments 1.0000 (F1 1.0000) | files 1.0000 (F1 1.0000)
+         same noisy input verified for 300 files  -> results/20m/noise_aug
+   10 dB noisy   : segments 1.0000 (F1 1.0000) | files 1.0000 (F1 1.0000)
+   10 dB denoised: segments 1.0000 (F1 1.0000) | files 1.0000 (F1 1.0000)
+         same noisy input verified for 300 files  -> results/20m/noise_aug
+    5 dB noisy   : segments 1.0000 (F1 1.0000) | files 1.0000 (F1 1.0000)
+    5 dB denoised: segments 1.0000 (F1 1.0000) | files 1.0000 (F1 1.0000)
+         same noisy input verified for 300 files  -> results/20m/noise_aug
+
+>>> scripts\make_report.py
+Conditions with results: 105 of 105
+Report: results/summary/final_results.md
+Tables and graphs: results/summary
+
+============================================================
+22m noise-augmented  (24.9 h elapsed)
+============================================================
+
+>>> scripts\train.py --distances 22m --model noise_aug
+
+=== Distance 22m (noise_aug) ===
+Loading data (train and validation files only)...
+  noise augmentation on training files only: {'snr_range_db': [0, 30], 'clean_fraction': 0.25}
+  train: 1400 files, 22400 segments
+  val  : 300 files, 4800 segments
+  built in 24 s
+Model parameters: 129,812
+
+Epoch | Train loss  acc  | Val loss  acc   | LR      | Time  | Note
+    1 | 0.0091  0.9979 | 0.0001  1.0000 | 1.0e-03 |  278s | saved best
+    2 | 0.0041  0.9989 | 0.9192  0.8069 | 1.0e-03 |  327s | no improvement 1/7
+    3 | 0.0007  0.9996 | 0.0001  1.0000 | 1.0e-03 |  262s | no improvement 2/7
+    4 | 0.0012  0.9997 | 0.0000  1.0000 | 1.0e-03 |  282s | no improvement 3/7
+    5 | 0.0008  0.9998 | 0.0000  1.0000 | 1.0e-03 |  263s | saved best
+    6 | 0.0002  1.0000 | 0.4814  0.9654 | 1.0e-03 |  283s | no improvement 1/7
+    7 | 0.0013  0.9995 | 0.0239  0.9915 | 1.0e-03 |  270s | no improvement 2/7
+    8 | 0.0000  1.0000 | 0.0018  0.9994 | 1.0e-03 |  268s | no improvement 3/7
+    9 | 0.0000  1.0000 | 0.0000  1.0000 | 5.0e-04 |  279s | no improvement 4/7
+   10 | 0.0000  1.0000 | 0.0000  1.0000 | 5.0e-04 |  241s | no improvement 5/7
+   11 | 0.0013  0.9997 | 0.0000  1.0000 | 5.0e-04 |  278s | no improvement 6/7
+   12 | 0.0004  0.9999 | 0.0001  1.0000 | 5.0e-04 |  277s | no improvement 7/7
+
+Early stopping after epoch 12.
+Best epoch 5: val loss 0.0000, val acc 1.0000
+Checkpoint: checkpoints/22m/noise_aug/best.pt
+
+>>> scripts\evaluate_clean.py --distances 22m --model noise_aug
+ 22m: segments 0.9815 (F1 0.9814) | files 0.9800 (F1 0.9800)  -> results/22m/noise_aug/test_clean
+      per-class file recall: Inspire 2 0.920, Matrice 30 1.000, Mavic 2 Pro 1.000, Phantom 4 Pro 1.000
+
+>>> scripts\evaluate_noise.py --distances 22m --model noise_aug
+SNR levels: [20, 10, 5] dB   Denoiser: STFTWienerDenoiser(nperseg=256, noverlap=192, gain_floor=0.0)
+
+22m:
+   20 dB noisy   : segments 0.9817 (F1 0.9816) | files 0.9800 (F1 0.9800)
+   20 dB denoised: segments 0.9779 (F1 0.9779) | files 0.9767 (F1 0.9766)
+         same noisy input verified for 300 files  -> results/22m/noise_aug
+   10 dB noisy   : segments 0.9860 (F1 0.9860) | files 0.9867 (F1 0.9867)
+   10 dB denoised: segments 0.9817 (F1 0.9816) | files 0.9800 (F1 0.9800)
+         same noisy input verified for 300 files  -> results/22m/noise_aug
+    5 dB noisy   : segments 0.9896 (F1 0.9896) | files 0.9900 (F1 0.9900)
+    5 dB denoised: segments 0.9829 (F1 0.9829) | files 0.9800 (F1 0.9800)
+         same noisy input verified for 300 files  -> results/22m/noise_aug
+
+>>> scripts\make_report.py
+Conditions with results: 105 of 105
+Report: results/summary/final_results.md
+Tables and graphs: results/summary
+
+============================================================
+24m noise-augmented  (25.9 h elapsed)
+============================================================
+
+>>> scripts\train.py --distances 24m --model noise_aug
+
+=== Distance 24m (noise_aug) ===
+Loading data (train and validation files only)...
+  noise augmentation on training files only: {'snr_range_db': [0, 30], 'clean_fraction': 0.25}
+  train: 1400 files, 22400 segments
+  val  : 300 files, 4800 segments
+  built in 25 s
+Model parameters: 129,812
+
+Epoch | Train loss  acc  | Val loss  acc   | LR      | Time  | Note
+    1 | 0.0091  0.9975 | 0.0001  1.0000 | 1.0e-03 |  277s | saved best
+    2 | 0.0001  1.0000 | 0.0000  1.0000 | 1.0e-03 |  274s | no improvement 1/7
+    3 | 0.0000  1.0000 | 0.0000  1.0000 | 1.0e-03 |  268s | no improvement 2/7
+    4 | 0.0000  1.0000 | 0.0000  1.0000 | 1.0e-03 |  263s | no improvement 3/7
+    5 | 0.0000  1.0000 | 0.0000  1.0000 | 1.0e-03 |  268s | no improvement 4/7
+    6 | 0.0000  1.0000 | 0.0000  1.0000 | 1.0e-03 |  263s | no improvement 5/7
+    7 | 0.0000  1.0000 | 0.0000  1.0000 | 1.0e-03 |  250s | no improvement 6/7
+    8 | 0.0000  1.0000 | 0.0000  1.0000 | 1.0e-03 |  250s | no improvement 7/7
+
+Early stopping after epoch 8.
+Best epoch 1: val loss 0.0001, val acc 1.0000
+Checkpoint: checkpoints/24m/noise_aug/best.pt
+
+>>> scripts\evaluate_clean.py --distances 24m --model noise_aug
+ 24m: segments 1.0000 (F1 1.0000) | files 1.0000 (F1 1.0000)  -> results/24m/noise_aug/test_clean
+      per-class file recall: Inspire 2 1.000, Matrice 30 1.000, Mavic 2 Pro 1.000, Phantom 4 Pro 1.000
+
+>>> scripts\evaluate_noise.py --distances 24m --model noise_aug
+SNR levels: [20, 10, 5] dB   Denoiser: STFTWienerDenoiser(nperseg=256, noverlap=192, gain_floor=0.0)
+
+24m:
+   20 dB noisy   : segments 1.0000 (F1 1.0000) | files 1.0000 (F1 1.0000)
+   20 dB denoised: segments 0.9413 (F1 0.9404) | files 0.9467 (F1 0.9461)
+         same noisy input verified for 300 files  -> results/24m/noise_aug
+   10 dB noisy   : segments 1.0000 (F1 1.0000) | files 1.0000 (F1 1.0000)
+   10 dB denoised: segments 0.9990 (F1 0.9990) | files 1.0000 (F1 1.0000)
+         same noisy input verified for 300 files  -> results/24m/noise_aug
+    5 dB noisy   : segments 1.0000 (F1 1.0000) | files 1.0000 (F1 1.0000)
+    5 dB denoised: segments 0.9992 (F1 0.9992) | files 1.0000 (F1 1.0000)
+         same noisy input verified for 300 files  -> results/24m/noise_aug
+
+>>> scripts\make_report.py
+Conditions with results: 105 of 105
+Report: results/summary/final_results.md
+Tables and graphs: results/summary
+
+============================================================
+26m noise-augmented  (26.5 h elapsed)
+============================================================
+
+>>> scripts\train.py --distances 26m --model noise_aug
+
+=== Distance 26m (noise_aug) ===
+Loading data (train and validation files only)...
+  noise augmentation on training files only: {'snr_range_db': [0, 30], 'clean_fraction': 0.25}
+  train: 1400 files, 22400 segments
+  val  : 300 files, 4800 segments
+  built in 24 s
+Model parameters: 129,812
+
+Epoch | Train loss  acc  | Val loss  acc   | LR      | Time  | Note
+    1 | 0.0581  0.9778 | 0.1132  0.9729 | 1.0e-03 |  250s | saved best
+    2 | 0.0253  0.9908 | 0.2623  0.9583 | 1.0e-03 |  249s | no improvement 1/7
+    3 | 0.0117  0.9949 | 0.2359  0.9602 | 1.0e-03 |  250s | no improvement 2/7
+    4 | 0.0153  0.9945 | 0.1235  0.9748 | 1.0e-03 |  251s | no improvement 3/7
+    5 | 0.0097  0.9966 | 0.2012  0.9696 | 5.0e-04 |  283s | no improvement 4/7
+    6 | 0.0100  0.9962 | 0.2904  0.9602 | 5.0e-04 |  253s | no improvement 5/7
+    7 | 0.0114  0.9958 | 0.2711  0.9594 | 5.0e-04 |  269s | no improvement 6/7
+    8 | 0.0107  0.9957 | 0.3306  0.9540 | 2.5e-04 |  257s | no improvement 7/7
+
+Early stopping after epoch 8.
+Best epoch 1: val loss 0.1132, val acc 0.9729
+Checkpoint: checkpoints/26m/noise_aug/best.pt
+
+>>> scripts\evaluate_clean.py --distances 26m --model noise_aug
+ 26m: segments 0.8254 (F1 0.7997) | files 0.8367 (F1 0.8172)  -> results/26m/noise_aug/test_clean
+      per-class file recall: Inspire 2 1.000, Matrice 30 1.000, Mavic 2 Pro 1.000, Phantom 4 Pro 0.347
+
+>>> scripts\evaluate_noise.py --distances 26m --model noise_aug
+SNR levels: [20, 10, 5] dB   Denoiser: STFTWienerDenoiser(nperseg=256, noverlap=192, gain_floor=0.0)
+
+26m:
+   20 dB noisy   : segments 0.8254 (F1 0.8000) | files 0.8233 (F1 0.7981)
+   20 dB denoised: segments 0.8252 (F1 0.8150) | files 0.8733 (F1 0.8615)
+         same noisy input verified for 300 files  -> results/26m/noise_aug
+   10 dB noisy   : segments 0.8081 (F1 0.7775) | files 0.8100 (F1 0.7764)
+   10 dB denoised: segments 0.7617 (F1 0.7442) | files 0.8000 (F1 0.7760)
+         same noisy input verified for 300 files  -> results/26m/noise_aug
+    5 dB noisy   : segments 0.8050 (F1 0.7681) | files 0.8033 (F1 0.7609)
+    5 dB denoised: segments 0.7396 (F1 0.7131) | files 0.7733 (F1 0.7232)
+         same noisy input verified for 300 files  -> results/26m/noise_aug
+
+>>> scripts\make_report.py
+Conditions with results: 105 of 105
+Report: results/summary/final_results.md
+Tables and graphs: results/summary
+
+============================================================
+28m noise-augmented  (27.2 h elapsed)
+============================================================
+
+>>> scripts\train.py --distances 28m --model noise_aug
+
+=== Distance 28m (noise_aug) ===
+Loading data (train and validation files only)...
+  noise augmentation on training files only: {'snr_range_db': [0, 30], 'clean_fraction': 0.25}
+  train: 1400 files, 22400 segments
+  val  : 300 files, 4800 segments
+  built in 24 s
+Model parameters: 129,812
+
+Epoch | Train loss  acc  | Val loss  acc   | LR      | Time  | Note
+    1 | 0.0080  0.9982 | 1.4732  0.8631 | 1.0e-03 |  251s | saved best
+    2 | 0.0001  1.0000 | 1.6187  0.8633 | 1.0e-03 |  251s | no improvement 1/7
+    3 | 0.0048  0.9988 | 1.9633  0.8558 | 1.0e-03 |  262s | no improvement 2/7
+    4 | 0.0000  1.0000 | 1.7836  0.8642 | 1.0e-03 |  278s | no improvement 3/7
+    5 | 0.0000  1.0000 | 1.9313  0.8596 | 5.0e-04 |  273s | no improvement 4/7
+    6 | 0.0000  1.0000 | 1.8690  0.8617 | 5.0e-04 |  273s | no improvement 5/7
+    7 | 0.0000  1.0000 | 1.8692  0.8623 | 5.0e-04 |  271s | no improvement 6/7
+    8 | 0.0000  1.0000 | 1.7222  0.8638 | 2.5e-04 |  272s | no improvement 7/7
+
+Early stopping after epoch 8.
+Best epoch 1: val loss 1.4732, val acc 0.8631
+Checkpoint: checkpoints/28m/noise_aug/best.pt
+
+>>> scripts\evaluate_clean.py --distances 28m --model noise_aug
+ 28m: segments 0.7435 (F1 0.6602) | files 0.7467 (F1 0.6633)  -> results/28m/noise_aug/test_clean
+      per-class file recall: Inspire 2 1.000, Matrice 30 1.000, Mavic 2 Pro 0.987, Phantom 4 Pro 0.000
+
+>>> scripts\evaluate_noise.py --distances 28m --model noise_aug
+SNR levels: [20, 10, 5] dB   Denoiser: STFTWienerDenoiser(nperseg=256, noverlap=192, gain_floor=0.0)
+
+28m:
+   20 dB noisy   : segments 0.7448 (F1 0.6615) | files 0.7467 (F1 0.6633)
+   20 dB denoised: segments 0.7492 (F1 0.6658) | files 0.7500 (F1 0.6667)
+         same noisy input verified for 300 files  -> results/28m/noise_aug
+   10 dB noisy   : segments 0.7450 (F1 0.6617) | files 0.7467 (F1 0.6633)
+   10 dB denoised: segments 0.7498 (F1 0.6665) | files 0.7500 (F1 0.6667)
+         same noisy input verified for 300 files  -> results/28m/noise_aug
+    5 dB noisy   : segments 0.7408 (F1 0.6575) | files 0.7500 (F1 0.6667)
+    5 dB denoised: segments 0.7496 (F1 0.6662) | files 0.7500 (F1 0.6667)
+         same noisy input verified for 300 files  -> results/28m/noise_aug
+
+>>> scripts\make_report.py
+Conditions with results: 105 of 105
+Report: results/summary/final_results.md
+Tables and graphs: results/summary
+
+============================================================
+30m noise-augmented  (27.8 h elapsed)
+============================================================
+
+>>> scripts\train.py --distances 30m --model noise_aug
+
+=== Distance 30m (noise_aug) ===
+Loading data (train and validation files only)...
+  noise augmentation on training files only: {'snr_range_db': [0, 30], 'clean_fraction': 0.25}
+  train: 1400 files, 22400 segments
+  val  : 300 files, 4800 segments
+  built in 24 s
+Model parameters: 129,812
+
+Epoch | Train loss  acc  | Val loss  acc   | LR      | Time  | Note
+    1 | 0.1070  0.9590 | 0.2087  0.9019 | 1.0e-03 |  264s | saved best
+    2 | 0.0473  0.9808 | 0.0335  0.9902 | 1.0e-03 |  260s | saved best
+    3 | 0.0284  0.9896 | 0.3666  0.8833 | 1.0e-03 |  257s | no improvement 1/7
+    4 | 0.0315  0.9877 | 0.0165  0.9975 | 1.0e-03 |  252s | saved best
+    5 | 0.0275  0.9891 | 0.0202  0.9944 | 1.0e-03 |  245s | no improvement 1/7
+    6 | 0.0266  0.9900 | 0.1044  0.9546 | 1.0e-03 |  263s | no improvement 2/7
+    7 | 0.0231  0.9908 | 0.0176  0.9967 | 1.0e-03 |  265s | no improvement 3/7
+    8 | 0.0202  0.9922 | 0.0238  0.9925 | 5.0e-04 |  273s | no improvement 4/7
+    9 | 0.0155  0.9942 | 0.0964  0.9673 | 5.0e-04 |  252s | no improvement 5/7
+   10 | 0.0165  0.9936 | 0.0215  0.9938 | 5.0e-04 |  250s | no improvement 6/7
+   11 | 0.0150  0.9944 | 0.0333  0.9912 | 2.5e-04 |  260s | no improvement 7/7
+
+Early stopping after epoch 11.
+Best epoch 4: val loss 0.0165, val acc 0.9975
+Checkpoint: checkpoints/30m/noise_aug/best.pt
+
+>>> scripts\evaluate_clean.py --distances 30m --model noise_aug
+ 30m: segments 0.9877 (F1 0.9877) | files 0.9967 (F1 0.9967)  -> results/30m/noise_aug/test_clean
+      per-class file recall: Inspire 2 1.000, Matrice 30 1.000, Mavic 2 Pro 1.000, Phantom 4 Pro 0.987
+
+>>> scripts\evaluate_noise.py --distances 30m --model noise_aug
+SNR levels: [20, 10, 5] dB   Denoiser: STFTWienerDenoiser(nperseg=256, noverlap=192, gain_floor=0.0)
+
+30m:
+   20 dB noisy   : segments 0.9835 (F1 0.9835) | files 0.9967 (F1 0.9967)
+   20 dB denoised: segments 0.9494 (F1 0.9502) | files 0.9633 (F1 0.9639)
+         same noisy input verified for 300 files  -> results/30m/noise_aug
+   10 dB noisy   : segments 0.9465 (F1 0.9460) | files 0.9800 (F1 0.9800)
+   10 dB denoised: segments 0.9698 (F1 0.9700) | files 0.9800 (F1 0.9802)
+         same noisy input verified for 300 files  -> results/30m/noise_aug
+    5 dB noisy   : segments 0.8585 (F1 0.8499) | files 0.8133 (F1 0.7831)
+    5 dB denoised: segments 0.9469 (F1 0.9463) | files 0.9600 (F1 0.9597)
+         same noisy input verified for 300 files  -> results/30m/noise_aug
+
+>>> scripts\make_report.py
+Conditions with results: 105 of 105
+Report: results/summary/final_results.md
+Tables and graphs: results/summary
+
+>>> scripts\all_distances.py
+
+=== All-distance model: 2m, 4m, 6m, 8m, 10m, 12m, 14m, 16m, 18m, 20m, 22m, 24m, 26m, 28m, 30m ===
+Loading train and validation files of every distance (no test files)...
+    2m train: 1400 files, 22400 segments
+    4m train: 1400 files, 22400 segments
+    6m train: 1400 files, 22400 segments
+    8m train: 1400 files, 22400 segments
+   10m train: 1400 files, 22400 segments
+   12m train: 1400 files, 22400 segments
+   14m train: 1400 files, 22400 segments
+   16m train: 1400 files, 22400 segments
+   18m train: 1400 files, 22400 segments
+   20m train: 1400 files, 22400 segments
+   22m train: 1400 files, 22400 segments
+   24m train: 1400 files, 22400 segments
+   26m train: 1400 files, 22400 segments
+   28m train: 1400 files, 22400 segments
+   30m train: 1400 files, 22400 segments
+    2m val: 300 files, 4800 segments
+    4m val: 300 files, 4800 segments
+    6m val: 300 files, 4800 segments
+    8m val: 300 files, 4800 segments
+   10m val: 300 files, 4800 segments
+   12m val: 300 files, 4800 segments
+   14m val: 300 files, 4800 segments
+   16m val: 300 files, 4800 segments
+   18m val: 300 files, 4800 segments
+   20m val: 300 files, 4800 segments
+   22m val: 300 files, 4800 segments
+   24m val: 300 files, 4800 segments
+   26m val: 300 files, 4800 segments
+   28m val: 300 files, 4800 segments
+   30m val: 300 files, 4800 segments
+  total: train 336000 segments, val 72000 segments, built in 317 s
+Model parameters: 129,812
+
+Epoch | Train loss  acc  | Val loss  acc   | LR      | Time  | Note
+    1 | 0.0903  0.9661 | 0.1681  0.9497 | 1.0e-03 | 4265s | saved best
+    2 | 0.0273  0.9910 | 0.0982  0.9756 | 1.0e-03 | 4365s | saved best
+    3 | 0.0190  0.9938 | 0.0936  0.9698 | 1.0e-03 | 59567s | saved best
+    4 | 0.0154  0.9950 | 0.0500  0.9835 | 1.0e-03 | 4356s | saved best
+    5 | 0.0131  0.9958 | 0.0810  0.9741 | 1.0e-03 | 4201s | no improvement 1/7
+    6 | 0.0116  0.9963 | 0.0475  0.9844 | 1.0e-03 | 4148s | saved best
+    7 | 0.0105  0.9966 | 0.1282  0.9659 | 1.0e-03 | 4238s | no improvement 1/7
+    8 | 0.0099  0.9968 | 0.0572  0.9811 | 1.0e-03 | 4355s | no improvement 2/7
+    9 | 0.0092  0.9969 | 0.1026  0.9759 | 1.0e-03 | 6460s | no improvement 3/7
+   10 | 0.0045  0.9985 | 0.0660  0.9808 | 5.0e-04 | 3986s | no improvement 4/7
+   11 | 0.0043  0.9985 | 0.0442  0.9873 | 5.0e-04 | 4025s | saved best
+   12 | 0.0040  0.9987 | 0.0302  0.9905 | 5.0e-04 | 3928s | saved best
+   13 | 0.0039  0.9987 | 0.0547  0.9823 | 5.0e-04 | 3935s | no improvement 1/7
+   14 | 0.0039  0.9986 | 0.0474  0.9864 | 5.0e-04 | 3951s | no improvement 2/7
+   15 | 0.0038  0.9987 | 0.0390  0.9882 | 5.0e-04 | 3875s | no improvement 3/7
+   16 | 0.0020  0.9994 | 0.0480  0.9878 | 2.5e-04 | 3885s | no improvement 4/7
+   17 | 0.0019  0.9994 | 0.0634  0.9842 | 2.5e-04 | 3943s | no improvement 5/7
+   18 | 0.0016  0.9994 | 0.0391  0.9897 | 2.5e-04 | 3908s | no improvement 6/7
+   19 | 0.0007  0.9998 | 0.0560  0.9878 | 1.3e-04 | 3944s | no improvement 7/7
+
+Early stopping after epoch 19.
+Best epoch 12: val loss 0.0302, val acc 0.9905
+Checkpoint: checkpoints/all_distances/best.pt
+2m:
+  clean      : segments 0.9919 (F1 0.9918) | files 1.0000 (F1 1.0000)
+   20 dB noisy : segments 0.9571 (F1 0.9568) | files 0.9900 (F1 0.9900)
+   20 dB denois: segments 0.9642 (F1 0.9641) | files 0.9867 (F1 0.9867)
+   10 dB noisy : segments 0.6665 (F1 0.6183) | files 0.6567 (F1 0.6012)
+   10 dB denois: segments 0.8871 (F1 0.8882) | files 0.9000 (F1 0.9023)
+    5 dB noisy : segments 0.4940 (F1 0.3799) | files 0.4967 (F1 0.3818)
+    5 dB denois: segments 0.7252 (F1 0.7166) | files 0.7600 (F1 0.7558)
+4m:
+  clean      : segments 0.9840 (F1 0.9839) | files 0.9833 (F1 0.9833)
+   20 dB noisy : segments 0.9333 (F1 0.9322) | files 0.9300 (F1 0.9286)
+   20 dB denois: segments 0.7598 (F1 0.7520) | files 0.8633 (F1 0.8573)
+   10 dB noisy : segments 0.6252 (F1 0.5774) | files 0.6367 (F1 0.5940)
+   10 dB denois: segments 0.7327 (F1 0.6896) | files 0.7667 (F1 0.7240)
+    5 dB noisy : segments 0.4906 (F1 0.3740) | files 0.4967 (F1 0.3864)
+    5 dB denois: segments 0.6512 (F1 0.5986) | files 0.6833 (F1 0.6198)
+6m:
+  clean      : segments 0.9663 (F1 0.9657) | files 0.9900 (F1 0.9900)
+   20 dB noisy : segments 0.8990 (F1 0.8932) | files 0.9400 (F1 0.9383)
+   20 dB denois: segments 0.8246 (F1 0.8181) | files 0.8833 (F1 0.8780)
+   10 dB noisy : segments 0.7079 (F1 0.6573) | files 0.7500 (F1 0.6637)
+   10 dB denois: segments 0.8771 (F1 0.8714) | files 0.9200 (F1 0.9155)
+    5 dB noisy : segments 0.6617 (F1 0.5722) | files 0.6767 (F1 0.5814)
+    5 dB denois: segments 0.8342 (F1 0.8181) | files 0.8700 (F1 0.8588)
+8m:
+  clean      : segments 0.9981 (F1 0.9981) | files 1.0000 (F1 1.0000)
+   20 dB noisy : segments 0.9979 (F1 0.9979) | files 1.0000 (F1 1.0000)
+   20 dB denois: segments 0.8598 (F1 0.8461) | files 0.8867 (F1 0.8795)
+   10 dB noisy : segments 0.8275 (F1 0.8252) | files 0.9367 (F1 0.9363)
+   10 dB denois: segments 0.9477 (F1 0.9472) | files 0.9867 (F1 0.9867)
+    5 dB noisy : segments 0.5123 (F1 0.4991) | files 0.4867 (F1 0.4771)
+    5 dB denois: segments 0.8935 (F1 0.8919) | files 0.9700 (F1 0.9699)
+10m:
+  clean      : segments 0.9938 (F1 0.9937) | files 0.9967 (F1 0.9967)
+   20 dB noisy : segments 0.9892 (F1 0.9892) | files 1.0000 (F1 1.0000)
+   20 dB denois: segments 0.6892 (F1 0.6459) | files 0.6433 (F1 0.5616)
+   10 dB noisy : segments 0.6262 (F1 0.6279) | files 0.6267 (F1 0.6185)
+   10 dB denois: segments 0.7633 (F1 0.7139) | files 0.7433 (F1 0.6633)
+    5 dB noisy : segments 0.3279 (F1 0.3116) | files 0.2600 (F1 0.2566)
+    5 dB denois: segments 0.7617 (F1 0.7287) | files 0.7633 (F1 0.7034)
+12m:
+  clean      : segments 0.8854 (F1 0.8785) | files 0.9533 (F1 0.9529)
+   20 dB noisy : segments 0.8650 (F1 0.8529) | files 0.8900 (F1 0.8839)
+   20 dB denois: segments 0.5894 (F1 0.5932) | files 0.5833 (F1 0.5798)
+   10 dB noisy : segments 0.7281 (F1 0.6681) | files 0.7367 (F1 0.6569)
+   10 dB denois: segments 0.6115 (F1 0.5876) | files 0.6133 (F1 0.5398)
+    5 dB noisy : segments 0.6923 (F1 0.6054) | files 0.7400 (F1 0.6494)
+    5 dB denois: segments 0.5852 (F1 0.5452) | files 0.5300 (F1 0.4519)
+14m:
+  clean      : segments 0.9398 (F1 0.9376) | files 0.9867 (F1 0.9867)
+   20 dB noisy : segments 0.9008 (F1 0.8965) | files 0.9867 (F1 0.9866)
+   20 dB denois: segments 0.6142 (F1 0.5508) | files 0.6400 (F1 0.5748)
+   10 dB noisy : segments 0.6496 (F1 0.6162) | files 0.6700 (F1 0.6190)
+   10 dB denois: segments 0.6538 (F1 0.5957) | files 0.7367 (F1 0.6569)
+    5 dB noisy : segments 0.6729 (F1 0.6725) | files 0.6000 (F1 0.5912)
+    5 dB denois: segments 0.6998 (F1 0.6555) | files 0.7467 (F1 0.6650)
+16m:
+  clean      : segments 0.7208 (F1 0.6880) | files 0.7800 (F1 0.7342)
+   20 dB noisy : segments 0.6760 (F1 0.6455) | files 0.7167 (F1 0.6825)
+   20 dB denois: segments 0.5271 (F1 0.4453) | files 0.5167 (F1 0.4189)
+   10 dB noisy : segments 0.5706 (F1 0.5498) | files 0.6367 (F1 0.6072)
+   10 dB denois: segments 0.4810 (F1 0.4272) | files 0.4400 (F1 0.3575)
+    5 dB noisy : segments 0.6465 (F1 0.6211) | files 0.7400 (F1 0.7047)
+    5 dB denois: segments 0.4606 (F1 0.4178) | files 0.4167 (F1 0.3614)
+18m:
+  clean      : segments 0.9771 (F1 0.9769) | files 0.9933 (F1 0.9933)
+   20 dB noisy : segments 0.9579 (F1 0.9574) | files 0.9867 (F1 0.9867)
+   20 dB denois: segments 0.5740 (F1 0.4815) | files 0.6200 (F1 0.5265)
+   10 dB noisy : segments 0.7217 (F1 0.6300) | files 0.7200 (F1 0.6348)
+   10 dB denois: segments 0.6904 (F1 0.6006) | files 0.7167 (F1 0.6176)
+    5 dB noisy : segments 0.6823 (F1 0.6016) | files 0.7067 (F1 0.6244)
+    5 dB denois: segments 0.6825 (F1 0.5989) | files 0.7133 (F1 0.6185)
+20m:
+  clean      : segments 0.9998 (F1 0.9998) | files 1.0000 (F1 1.0000)
+   20 dB noisy : segments 0.9992 (F1 0.9992) | files 1.0000 (F1 1.0000)
+   20 dB denois: segments 0.7129 (F1 0.6438) | files 0.7500 (F1 0.6667)
+   10 dB noisy : segments 0.8831 (F1 0.8742) | files 0.9200 (F1 0.9171)
+   10 dB denois: segments 0.7815 (F1 0.7338) | files 0.7500 (F1 0.6667)
+    5 dB noisy : segments 0.8244 (F1 0.8038) | files 0.8800 (F1 0.8683)
+    5 dB denois: segments 0.8458 (F1 0.8320) | files 0.8500 (F1 0.8352)
+22m:
+  clean      : segments 0.9865 (F1 0.9865) | files 0.9867 (F1 0.9867)
+   20 dB noisy : segments 0.9875 (F1 0.9875) | files 0.9867 (F1 0.9867)
+   20 dB denois: segments 0.9804 (F1 0.9804) | files 1.0000 (F1 1.0000)
+   10 dB noisy : segments 0.8217 (F1 0.7975) | files 0.8300 (F1 0.8051)
+   10 dB denois: segments 0.8454 (F1 0.8241) | files 0.8467 (F1 0.8267)
+    5 dB noisy : segments 0.6102 (F1 0.5324) | files 0.6000 (F1 0.5081)
+    5 dB denois: segments 0.7667 (F1 0.7095) | files 0.7667 (F1 0.6984)
+24m:
+  clean      : segments 0.9533 (F1 0.9529) | files 0.9600 (F1 0.9597)
+   20 dB noisy : segments 0.9642 (F1 0.9640) | files 0.9800 (F1 0.9800)
+   20 dB denois: segments 0.8808 (F1 0.8744) | files 0.9467 (F1 0.9450)
+   10 dB noisy : segments 0.9185 (F1 0.9163) | files 0.9167 (F1 0.9143)
+   10 dB denois: segments 0.8877 (F1 0.8830) | files 0.9100 (F1 0.9070)
+    5 dB noisy : segments 0.7510 (F1 0.6681) | files 0.7500 (F1 0.6667)
+    5 dB denois: segments 0.8308 (F1 0.8174) | files 0.8400 (F1 0.8217)
+26m:
+  clean      : segments 1.0000 (F1 1.0000) | files 1.0000 (F1 1.0000)
+   20 dB noisy : segments 1.0000 (F1 1.0000) | files 1.0000 (F1 1.0000)
+   20 dB denois: segments 0.7369 (F1 0.6820) | files 0.7433 (F1 0.6604)
+   10 dB noisy : segments 0.8173 (F1 0.7879) | files 0.7667 (F1 0.7017)
+   10 dB denois: segments 0.9248 (F1 0.9234) | files 0.9767 (F1 0.9766)
+    5 dB noisy : segments 0.6048 (F1 0.5298) | files 0.6033 (F1 0.5254)
+    5 dB denois: segments 0.9142 (F1 0.9126) | files 0.9667 (F1 0.9666)
+28m:
+  clean      : segments 0.9283 (F1 0.9270) | files 0.9733 (F1 0.9733)
+   20 dB noisy : segments 0.8402 (F1 0.8280) | files 0.8600 (F1 0.8481)
+   20 dB denois: segments 0.7352 (F1 0.7350) | files 0.8667 (F1 0.8660)
+   10 dB noisy : segments 0.7350 (F1 0.6480) | files 0.7500 (F1 0.6588)
+   10 dB denois: segments 0.8533 (F1 0.8555) | files 0.9567 (F1 0.9563)
+    5 dB noisy : segments 0.7108 (F1 0.6216) | files 0.7500 (F1 0.6624)
+    5 dB denois: segments 0.8242 (F1 0.8265) | files 0.9700 (F1 0.9699)
+30m:
+  clean      : segments 0.9867 (F1 0.9867) | files 0.9933 (F1 0.9933)
+   20 dB noisy : segments 0.9648 (F1 0.9646) | files 0.9800 (F1 0.9800)
+   20 dB denois: segments 0.7198 (F1 0.6786) | files 0.7633 (F1 0.6938)
+   10 dB noisy : segments 0.8015 (F1 0.7734) | files 0.7700 (F1 0.7083)
+   10 dB denois: segments 0.7375 (F1 0.7255) | files 0.7333 (F1 0.6946)
+    5 dB noisy : segments 0.6148 (F1 0.5649) | files 0.6433 (F1 0.5815)
+    5 dB denois: segments 0.8565 (F1 0.8553) | files 0.9500 (F1 0.9499)
+
+>>> scripts\make_report.py
+Conditions with results: 105 of 105
+Report: results/summary/final_results.md
+Tables and graphs: results/summary
+
+>>> scripts\cross_distance.py
+
+=== Cross-distance: train 8m, 10m, 12m, 14m -> test 16m ===
+Loading train and validation files of the training distances only...
+    8m: train 1400 files / 22400 segments, val 300 files / 4800 segments
+   10m: train 1400 files / 22400 segments, val 300 files / 4800 segments
+   12m: train 1400 files / 22400 segments, val 300 files / 4800 segments
+   14m: train 1400 files / 22400 segments, val 300 files / 4800 segments
+  built in 89 s
+Model parameters: 129,812
+
+Epoch | Train loss  acc  | Val loss  acc   | LR      | Time  | Note
+    1 | 0.0784  0.9700 | 0.1102  0.9652 | 1.0e-03 | 1062s | saved best
+    2 | 0.0189  0.9940 | 0.0582  0.9770 | 1.0e-03 | 1038s | saved best
+    3 | 0.0134  0.9957 | 0.1877  0.9464 | 1.0e-03 | 1026s | no improvement 1/7
+    4 | 0.0112  0.9962 | 0.0537  0.9833 | 1.0e-03 |  998s | saved best
+    5 | 0.0084  0.9972 | 0.0529  0.9796 | 1.0e-03 | 1000s | saved best
+    6 | 0.0077  0.9975 | 0.0621  0.9772 | 1.0e-03 |  984s | no improvement 1/7
+    7 | 0.0067  0.9978 | 0.2971  0.9286 | 1.0e-03 |  979s | no improvement 2/7
+    8 | 0.0065  0.9982 | 0.0373  0.9872 | 1.0e-03 |  995s | saved best
+    9 | 0.0051  0.9983 | 0.0249  0.9907 | 1.0e-03 | 1030s | saved best
+   10 | 0.0044  0.9986 | 0.0178  0.9934 | 1.0e-03 | 1019s | saved best
+   11 | 0.0047  0.9986 | 0.0562  0.9807 | 1.0e-03 | 1006s | no improvement 1/7
+   12 | 0.0046  0.9985 | 0.1160  0.9727 | 1.0e-03 |  999s | no improvement 2/7
+   13 | 0.0040  0.9987 | 0.0933  0.9718 | 1.0e-03 | 1004s | no improvement 3/7
+   14 | 0.0012  0.9996 | 0.1223  0.9652 | 5.0e-04 | 1106s | no improvement 4/7
+   15 | 0.0017  0.9995 | 0.0278  0.9907 | 5.0e-04 | 1266s | no improvement 5/7
+   16 | 0.0011  0.9996 | 0.1066  0.9734 | 5.0e-04 | 1130s | no improvement 6/7
+   17 | 0.0005  0.9998 | 0.0323  0.9912 | 2.5e-04 | 1096s | no improvement 7/7
+
+Early stopping after epoch 17.
+Best epoch 10: val loss 0.0178, val acc 0.9934
+Checkpoint: checkpoints/cross_distance/train_8m-10m-12m-14m__test_16m/best.pt
+      clean: segments 0.5385 (F1 0.4721) | files 0.5267 (F1 0.4562)
+       20dB: segments 0.5231 (F1 0.4664) | files 0.5133 (F1 0.4437)
+   20dB+den: segments 0.4992 (F1 0.3748) | files 0.5000 (F1 0.3750)
+       10dB: segments 0.5398 (F1 0.5098) | files 0.5433 (F1 0.5029)
+   10dB+den: segments 0.4994 (F1 0.3774) | files 0.5000 (F1 0.3750)
+        5dB: segments 0.6035 (F1 0.5501) | files 0.6133 (F1 0.5493)
+    5dB+den: segments 0.5004 (F1 0.3819) | files 0.5000 (F1 0.3758)
+
+Summary: results/cross_distance/train_8m-10m-12m-14m__test_16m/summary.md
+
+Optional experiments finished in 72.0 h.

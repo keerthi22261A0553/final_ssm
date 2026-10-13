@@ -1,0 +1,24 @@
+
+=== Distance 4m (noise_aug) ===
+Loading data (train and validation files only)...
+  noise augmentation on training files only: {'snr_range_db': [0, 30], 'clean_fraction': 0.25}
+  train: 1400 files, 22400 segments
+  val  : 300 files, 4800 segments
+  built in 26 s
+Model parameters: 129,812
+
+Epoch | Train loss  acc  | Val loss  acc   | LR      | Time  | Note
+    1 | 0.0274  0.9922 | 0.0598  0.9779 | 1.0e-03 |  259s | saved best
+    2 | 0.0180  0.9950 | 0.3215  0.9256 | 1.0e-03 |  249s | no improvement 1/7
+    3 | 0.0052  0.9984 | 0.0047  0.9977 | 1.0e-03 |  237s | saved best
+    4 | 0.0086  0.9975 | 0.0568  0.9804 | 1.0e-03 |  247s | no improvement 1/7
+    5 | 0.0073  0.9978 | 0.1799  0.9523 | 1.0e-03 |  245s | no improvement 2/7
+    6 | 0.0045  0.9985 | 0.3116  0.9333 | 1.0e-03 |  251s | no improvement 3/7
+    7 | 0.0014  0.9994 | 0.1026  0.9696 | 5.0e-04 |  260s | no improvement 4/7
+    8 | 0.0020  0.9992 | 0.0336  0.9890 | 5.0e-04 |  247s | no improvement 5/7
+    9 | 0.0036  0.9988 | 0.0326  0.9890 | 5.0e-04 |  246s | no improvement 6/7
+   10 | 0.0026  0.9992 | 0.0142  0.9956 | 2.5e-04 |  248s | no improvement 7/7
+
+Early stopping after epoch 10.
+Best epoch 3: val loss 0.0047, val acc 0.9977
+Checkpoint: checkpoints/4m/noise_aug/best.pt

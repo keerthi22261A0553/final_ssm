@@ -1,0 +1,18 @@
+__pycache__/
+*.pyc
+venv/
+.pytest_cache/
+
+# TSMS-Drone dataset (2.7 GB): not redistributed; copy it into
+# data/raw/CW Radar/<distance>/<class>/Raw File/ (see README)
+data/raw/
+
+# Resume-only training state; best.pt (the tested models) is kept
+checkpoints/**/last.pt
+
+# Superseded runs (20 m / 22 m before the min_delta stopping rule)
+archive/
+
+# Zipped Python environment (2.9 GB), local only
+.venv.zip
+*.zip

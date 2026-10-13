@@ -1,0 +1,9 @@
+{
+  "distance": "4m",
+  "run_name": "noise_aug",
+  "best_epoch": 3,
+  "best_val_loss": 0.004732539406910897,
+  "best_val_acc": 0.9977083333333333,
+  "epochs_run": 10,
+  "split_fingerprint": "ad9bc1feaa9154af2c3480e70b0a92bc23cc8bc389751f3b1613eae50bd7410d"
+}

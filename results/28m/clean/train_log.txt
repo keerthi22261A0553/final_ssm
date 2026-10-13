@@ -1,0 +1,25 @@
+
+=== Distance 28m (clean) ===
+Loading data (train and validation files only)...
+  train: 1400 files, 22400 segments
+  val  : 300 files, 4800 segments
+  built in 26 s
+Model parameters: 129,812
+
+Epoch | Train loss  acc  | Val loss  acc   | LR      | Time  | Note
+    1 | 0.0072  0.9978 | 1.4320  0.8629 | 1.0e-03 |  309s | saved best
+    2 | 0.0001  1.0000 | 1.5925  0.8629 | 1.0e-03 |  295s | no improvement 1/7
+    3 | 0.0000  1.0000 | 1.7006  0.8629 | 1.0e-03 |  299s | no improvement 2/7
+    4 | 0.0000  1.0000 | 1.7651  0.8633 | 1.0e-03 |  305s | no improvement 3/7
+    5 | 0.0029  0.9994 | 1.0401  0.8569 | 5.0e-04 |  305s | saved best
+    6 | 0.0012  0.9997 | 1.7028  0.8610 | 5.0e-04 |  306s | no improvement 1/7
+    7 | 0.0000  1.0000 | 1.6952  0.8625 | 5.0e-04 |  296s | no improvement 2/7
+    8 | 0.0000  1.0000 | 1.7156  0.8625 | 5.0e-04 |  306s | no improvement 3/7
+    9 | 0.0000  1.0000 | 1.7271  0.8625 | 2.5e-04 |  291s | no improvement 4/7
+   10 | 0.0000  1.0000 | 1.7187  0.8625 | 2.5e-04 |  274s | no improvement 5/7
+   11 | 0.0000  1.0000 | 1.7550  0.8625 | 2.5e-04 |  458s | no improvement 6/7
+   12 | 0.0000  1.0000 | 1.7820  0.8625 | 1.3e-04 |  250s | no improvement 7/7
+
+Early stopping after epoch 12.
+Best epoch 5: val loss 1.0401, val acc 0.8569
+Checkpoint: checkpoints/28m/clean/best.pt

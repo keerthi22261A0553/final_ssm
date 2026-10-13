@@ -1,0 +1,254 @@
+
+>>> scripts\inspect_dataset.py
+Dataset folder: data/raw/CW Radar
+Distances found (15): 2m, 4m, 6m, 8m, 10m, 12m, 14m, 16m, 18m, 20m, 22m, 24m, 26m, 28m, 30m
+Classes used   : Inspire 2, Matrice 30, Mavic 2 Pro, Phantom 4 Pro
+Excluded       : Corner Reflector
+
+Distance |     Inspire 2 |    Matrice 30 |   Mavic 2 Pro | Phantom 4 Pro | Excluded (not used)
+      2m |           500 |           500 |           500 |           500 | Corner Reflector 500
+      4m |           500 |           500 |           500 |           500 | Corner Reflector 500
+      6m |           500 |           500 |           500 |           500 | Corner Reflector 500
+      8m |           500 |           500 |           500 |           500 | Corner Reflector 500
+     10m |           500 |           500 |           500 |           500 | Corner Reflector 500
+     12m |           500 |           500 |           500 |           500 | Corner Reflector 500
+     14m |           500 |           500 |           500 |           500 | Corner Reflector 500
+     16m |           500 |           500 |           500 |           500 | Corner Reflector 500
+     18m |           500 |           500 |           500 |           500 | Corner Reflector 500
+     20m |           500 |           500 |           500 |           500 | Corner Reflector 500
+     22m |           500 |           500 |           500 |           500 | Corner Reflector 500
+     24m |           500 |           500 |           500 |           500 | Corner Reflector 500
+     26m |           500 |           500 |           500 |           500 | Corner Reflector 500
+     28m |           500 |           500 |           500 |           500 | Corner Reflector 500
+     30m |           500 |           500 |           500 |           500 | Corner Reflector 500
+
+Usable files (4 classes, all distances): 30000
+
+Problems: none
+
+Saved: results/summary/dataset_inventory.csv
+
+============================================================
+2m  (0.0 h elapsed)
+============================================================
+
+>>> scripts\train.py --distances 2m
+2m: already trained (checkpoints/2m/clean/done.json), skipped.
+
+>>> scripts\make_report.py
+Conditions with results: 98 of 105
+Report: results/summary/final_results.md
+Tables and graphs: results/summary
+
+============================================================
+4m  (0.0 h elapsed)
+============================================================
+
+>>> scripts\train.py --distances 4m
+4m: already trained (checkpoints/4m/clean/done.json), skipped.
+
+>>> scripts\make_report.py
+Conditions with results: 98 of 105
+Report: results/summary/final_results.md
+Tables and graphs: results/summary
+
+============================================================
+6m  (0.0 h elapsed)
+============================================================
+
+>>> scripts\train.py --distances 6m
+6m: already trained (checkpoints/6m/clean/done.json), skipped.
+
+>>> scripts\make_report.py
+Conditions with results: 98 of 105
+Report: results/summary/final_results.md
+Tables and graphs: results/summary
+
+============================================================
+8m  (0.0 h elapsed)
+============================================================
+
+>>> scripts\train.py --distances 8m
+8m: already trained (checkpoints/8m/clean/done.json), skipped.
+
+>>> scripts\make_report.py
+Conditions with results: 98 of 105
+Report: results/summary/final_results.md
+Tables and graphs: results/summary
+
+============================================================
+10m  (0.0 h elapsed)
+============================================================
+
+>>> scripts\train.py --distances 10m
+10m: already trained (checkpoints/10m/clean/done.json), skipped.
+
+>>> scripts\make_report.py
+Conditions with results: 98 of 105
+Report: results/summary/final_results.md
+Tables and graphs: results/summary
+
+============================================================
+12m  (0.0 h elapsed)
+============================================================
+
+>>> scripts\train.py --distances 12m
+12m: already trained (checkpoints/12m/clean/done.json), skipped.
+
+>>> scripts\make_report.py
+Conditions with results: 98 of 105
+Report: results/summary/final_results.md
+Tables and graphs: results/summary
+
+============================================================
+14m  (0.0 h elapsed)
+============================================================
+
+>>> scripts\train.py --distances 14m
+14m: already trained (checkpoints/14m/clean/done.json), skipped.
+
+>>> scripts\make_report.py
+Conditions with results: 98 of 105
+Report: results/summary/final_results.md
+Tables and graphs: results/summary
+
+============================================================
+16m  (0.0 h elapsed)
+============================================================
+
+>>> scripts\train.py --distances 16m
+16m: already trained (checkpoints/16m/clean/done.json), skipped.
+
+>>> scripts\make_report.py
+Conditions with results: 98 of 105
+Report: results/summary/final_results.md
+Tables and graphs: results/summary
+
+============================================================
+18m  (0.0 h elapsed)
+============================================================
+
+>>> scripts\train.py --distances 18m
+18m: already trained (checkpoints/18m/clean/done.json), skipped.
+
+>>> scripts\make_report.py
+Conditions with results: 98 of 105
+Report: results/summary/final_results.md
+Tables and graphs: results/summary
+
+============================================================
+20m  (0.0 h elapsed)
+============================================================
+
+>>> scripts\train.py --distances 20m
+20m: already trained (checkpoints/20m/clean/done.json), skipped.
+
+>>> scripts\make_report.py
+Conditions with results: 98 of 105
+Report: results/summary/final_results.md
+Tables and graphs: results/summary
+
+============================================================
+22m  (0.0 h elapsed)
+============================================================
+
+>>> scripts\train.py --distances 22m
+22m: already trained (checkpoints/22m/clean/done.json), skipped.
+
+>>> scripts\make_report.py
+Conditions with results: 98 of 105
+Report: results/summary/final_results.md
+Tables and graphs: results/summary
+
+============================================================
+24m  (0.0 h elapsed)
+============================================================
+
+>>> scripts\train.py --distances 24m
+24m: already trained (checkpoints/24m/clean/done.json), skipped.
+
+>>> scripts\make_report.py
+Conditions with results: 98 of 105
+Report: results/summary/final_results.md
+Tables and graphs: results/summary
+
+============================================================
+26m  (0.0 h elapsed)
+============================================================
+
+>>> scripts\train.py --distances 26m
+26m: already trained (checkpoints/26m/clean/done.json), skipped.
+
+>>> scripts\make_report.py
+Conditions with results: 98 of 105
+Report: results/summary/final_results.md
+Tables and graphs: results/summary
+
+============================================================
+28m  (0.0 h elapsed)
+============================================================
+
+>>> scripts\train.py --distances 28m
+28m: already trained (checkpoints/28m/clean/done.json), skipped.
+
+>>> scripts\make_report.py
+Conditions with results: 98 of 105
+Report: results/summary/final_results.md
+Tables and graphs: results/summary
+
+============================================================
+30m  (0.0 h elapsed)
+============================================================
+
+>>> scripts\train.py --distances 30m
+
+=== Distance 30m (clean) ===
+Loading data (train and validation files only)...
+  train: 1400 files, 22400 segments
+  val  : 300 files, 4800 segments
+  built in 9 s
+Model parameters: 129,812
+Resuming after epoch 7.
+
+Epoch | Train loss  acc  | Val loss  acc   | LR      | Time  | Note
+    8 | 0.0042  0.9988 | 0.0637  0.9804 | 1.0e-03 |  266s | no improvement 2/7
+    9 | 0.0067  0.9981 | 0.0432  0.9873 | 1.0e-03 |  255s | no improvement 3/7
+   10 | 0.0021  0.9992 | 0.0136  0.9956 | 5.0e-04 |  274s | no improvement 4/7
+   11 | 0.0010  0.9996 | 0.0093  0.9969 | 5.0e-04 |  250s | saved best
+   12 | 0.0018  0.9995 | 0.0064  0.9981 | 5.0e-04 |  238s | saved best
+   13 | 0.0009  0.9996 | 0.0098  0.9971 | 5.0e-04 |  304s | no improvement 1/7
+   14 | 0.0010  0.9996 | 0.0126  0.9965 | 5.0e-04 |  258s | no improvement 2/7
+   15 | 0.0006  0.9998 | 0.0125  0.9956 | 5.0e-04 |  254s | no improvement 3/7
+   16 | 0.0001  1.0000 | 0.0144  0.9952 | 2.5e-04 |  242s | no improvement 4/7
+   17 | 0.0003  1.0000 | 0.0089  0.9971 | 2.5e-04 |  250s | no improvement 5/7
+   18 | 0.0001  1.0000 | 0.0080  0.9975 | 2.5e-04 |  263s | no improvement 6/7
+   19 | 0.0000  1.0000 | 0.0154  0.9958 | 1.3e-04 |  258s | no improvement 7/7
+
+Early stopping after epoch 19.
+Best epoch 12: val loss 0.0064, val acc 0.9981
+Checkpoint: checkpoints/30m/clean/best.pt
+
+>>> scripts\evaluate_clean.py --distances 30m
+ 30m: segments 0.9885 (F1 0.9885) | files 0.9933 (F1 0.9933)  -> results/30m/clean/test_clean
+      per-class file recall: Inspire 2 1.000, Matrice 30 1.000, Mavic 2 Pro 1.000, Phantom 4 Pro 0.973
+
+>>> scripts\evaluate_noise.py --distances 30m
+SNR levels: [20, 10, 5] dB   Denoiser: STFTWienerDenoiser(nperseg=256, noverlap=192, gain_floor=0.0)
+
+30m:
+   20 dB noisy   : segments 0.9833 (F1 0.9833) | files 0.9933 (F1 0.9933)
+   20 dB denoised: segments 0.9915 (F1 0.9915) | files 0.9933 (F1 0.9933)
+         same noisy input verified for 300 files  -> results/30m/clean
+   10 dB noisy   : segments 0.7896 (F1 0.7622) | files 0.8167 (F1 0.7906)
+   10 dB denoised: segments 0.9927 (F1 0.9927) | files 0.9967 (F1 0.9967)
+         same noisy input verified for 300 files  -> results/30m/clean
+    5 dB noisy   : segments 0.5058 (F1 0.3855) | files 0.5000 (F1 0.3750)
+    5 dB denoised: segments 0.9613 (F1 0.9606) | files 0.9833 (F1 0.9832)
+         same noisy input verified for 300 files  -> results/30m/clean
+
+>>> scripts\make_report.py
+Conditions with results: 105 of 105
+Report: results/summary/final_results.md
+Tables and graphs: results/summary
+
+Finished in 0.9 h.

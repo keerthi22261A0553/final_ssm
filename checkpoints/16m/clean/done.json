@@ -1,0 +1,9 @@
+{
+  "distance": "16m",
+  "run_name": "clean",
+  "best_epoch": 1,
+  "best_val_loss": 0.002475544832001712,
+  "best_val_acc": 0.9989583333333333,
+  "epochs_run": 8,
+  "split_fingerprint": "78b8ee707fece7bb56bafd8701e69463429d7cbaa246feae1acf8a4f3ed3f496"
+}

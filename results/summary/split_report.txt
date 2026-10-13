@@ -1,0 +1,855 @@
+============================================================
+
+Distance: 2m
+Class: Inspire 2
+
+TRAIN : 350 files  (files 001-350)
+VAL   :  75 files  (files 351-425)
+TEST  :  75 files  (files 426-500)
+
+Total files: 500
+
+Overlap check:
+TRAIN VS VAL: 0
+TRAIN VS TEST: 0
+VAL VS TEST: 0
+
+Distance: 2m
+Class: Matrice 30
+
+TRAIN : 350 files  (files 001-350)
+VAL   :  75 files  (files 351-425)
+TEST  :  75 files  (files 426-500)
+
+Total files: 500
+
+Overlap check:
+TRAIN VS VAL: 0
+TRAIN VS TEST: 0
+VAL VS TEST: 0
+
+Distance: 2m
+Class: Mavic 2 Pro
+
+TRAIN : 350 files  (files 001-350)
+VAL   :  75 files  (files 351-425)
+TEST  :  75 files  (files 426-500)
+
+Total files: 500
+
+Overlap check:
+TRAIN VS VAL: 0
+TRAIN VS TEST: 0
+VAL VS TEST: 0
+
+Distance: 2m
+Class: Phantom 4 Pro
+
+TRAIN : 350 files  (files 001-350)
+VAL   :  75 files  (files 351-425)
+TEST  :  75 files  (files 426-500)
+
+Total files: 500
+
+Overlap check:
+TRAIN VS VAL: 0
+TRAIN VS TEST: 0
+VAL VS TEST: 0
+============================================================
+
+Distance: 4m
+Class: Inspire 2
+
+TRAIN : 350 files  (files 001-350)
+VAL   :  75 files  (files 351-425)
+TEST  :  75 files  (files 426-500)
+
+Total files: 500
+
+Overlap check:
+TRAIN VS VAL: 0
+TRAIN VS TEST: 0
+VAL VS TEST: 0
+
+Distance: 4m
+Class: Matrice 30
+
+TRAIN : 350 files  (files 001-350)
+VAL   :  75 files  (files 351-425)
+TEST  :  75 files  (files 426-500)
+
+Total files: 500
+
+Overlap check:
+TRAIN VS VAL: 0
+TRAIN VS TEST: 0
+VAL VS TEST: 0
+
+Distance: 4m
+Class: Mavic 2 Pro
+
+TRAIN : 350 files  (files 001-350)
+VAL   :  75 files  (files 351-425)
+TEST  :  75 files  (files 426-500)
+
+Total files: 500
+
+Overlap check:
+TRAIN VS VAL: 0
+TRAIN VS TEST: 0
+VAL VS TEST: 0
+
+Distance: 4m
+Class: Phantom 4 Pro
+
+TRAIN : 350 files  (files 001-350)
+VAL   :  75 files  (files 351-425)
+TEST  :  75 files  (files 426-500)
+
+Total files: 500
+
+Overlap check:
+TRAIN VS VAL: 0
+TRAIN VS TEST: 0
+VAL VS TEST: 0
+============================================================
+
+Distance: 6m
+Class: Inspire 2
+
+TRAIN : 350 files  (files 001-350)
+VAL   :  75 files  (files 351-425)
+TEST  :  75 files  (files 426-500)
+
+Total files: 500
+
+Overlap check:
+TRAIN VS VAL: 0
+TRAIN VS TEST: 0
+VAL VS TEST: 0
+
+Distance: 6m
+Class: Matrice 30
+
+TRAIN : 350 files  (files 001-350)
+VAL   :  75 files  (files 351-425)
+TEST  :  75 files  (files 426-500)
+
+Total files: 500
+
+Overlap check:
+TRAIN VS VAL: 0
+TRAIN VS TEST: 0
+VAL VS TEST: 0
+
+Distance: 6m
+Class: Mavic 2 Pro
+
+TRAIN : 350 files  (files 001-350)
+VAL   :  75 files  (files 351-425)
+TEST  :  75 files  (files 426-500)
+
+Total files: 500
+
+Overlap check:
+TRAIN VS VAL: 0
+TRAIN VS TEST: 0
+VAL VS TEST: 0
+
+Distance: 6m
+Class: Phantom 4 Pro
+
+TRAIN : 350 files  (files 001-350)
+VAL   :  75 files  (files 351-425)
+TEST  :  75 files  (files 426-500)
+
+Total files: 500
+
+Overlap check:
+TRAIN VS VAL: 0
+TRAIN VS TEST: 0
+VAL VS TEST: 0
+============================================================
+
+Distance: 8m
+Class: Inspire 2
+
+TRAIN : 350 files  (files 001-350)
+VAL   :  75 files  (files 351-425)
+TEST  :  75 files  (files 426-500)
+
+Total files: 500
+
+Overlap check:
+TRAIN VS VAL: 0
+TRAIN VS TEST: 0
+VAL VS TEST: 0
+
+Distance: 8m
+Class: Matrice 30
+
+TRAIN : 350 files  (files 001-350)
+VAL   :  75 files  (files 351-425)
+TEST  :  75 files  (files 426-500)
+
+Total files: 500
+
+Overlap check:
+TRAIN VS VAL: 0
+TRAIN VS TEST: 0
+VAL VS TEST: 0
+
+Distance: 8m
+Class: Mavic 2 Pro
+
+TRAIN : 350 files  (files 001-350)
+VAL   :  75 files  (files 351-425)
+TEST  :  75 files  (files 426-500)
+
+Total files: 500
+
+Overlap check:
+TRAIN VS VAL: 0
+TRAIN VS TEST: 0
+VAL VS TEST: 0
+
+Distance: 8m
+Class: Phantom 4 Pro
+
+TRAIN : 350 files  (files 001-350)
+VAL   :  75 files  (files 351-425)
+TEST  :  75 files  (files 426-500)
+
+Total files: 500
+
+Overlap check:
+TRAIN VS VAL: 0
+TRAIN VS TEST: 0
+VAL VS TEST: 0
+============================================================
+
+Distance: 10m
+Class: Inspire 2
+
+TRAIN : 350 files  (files 001-350)
+VAL   :  75 files  (files 351-425)
+TEST  :  75 files  (files 426-500)
+
+Total files: 500
+
+Overlap check:
+TRAIN VS VAL: 0
+TRAIN VS TEST: 0
+VAL VS TEST: 0
+
+Distance: 10m
+Class: Matrice 30
+
+TRAIN : 350 files  (files 001-350)
+VAL   :  75 files  (files 351-425)
+TEST  :  75 files  (files 426-500)
+
+Total files: 500
+
+Overlap check:
+TRAIN VS VAL: 0
+TRAIN VS TEST: 0
+VAL VS TEST: 0
+
+Distance: 10m
+Class: Mavic 2 Pro
+
+TRAIN : 350 files  (files 001-350)
+VAL   :  75 files  (files 351-425)
+TEST  :  75 files  (files 426-500)
+
+Total files: 500
+
+Overlap check:
+TRAIN VS VAL: 0
+TRAIN VS TEST: 0
+VAL VS TEST: 0
+
+Distance: 10m
+Class: Phantom 4 Pro
+
+TRAIN : 350 files  (files 001-350)
+VAL   :  75 files  (files 351-425)
+TEST  :  75 files  (files 426-500)
+
+Total files: 500
+
+Overlap check:
+TRAIN VS VAL: 0
+TRAIN VS TEST: 0
+VAL VS TEST: 0
+============================================================
+
+Distance: 12m
+Class: Inspire 2
+
+TRAIN : 350 files  (files 001-350)
+VAL   :  75 files  (files 351-425)
+TEST  :  75 files  (files 426-500)
+
+Total files: 500
+
+Overlap check:
+TRAIN VS VAL: 0
+TRAIN VS TEST: 0
+VAL VS TEST: 0
+
+Distance: 12m
+Class: Matrice 30
+
+TRAIN : 350 files  (files 001-350)
+VAL   :  75 files  (files 351-425)
+TEST  :  75 files  (files 426-500)
+
+Total files: 500
+
+Overlap check:
+TRAIN VS VAL: 0
+TRAIN VS TEST: 0
+VAL VS TEST: 0
+
+Distance: 12m
+Class: Mavic 2 Pro
+
+TRAIN : 350 files  (files 001-350)
+VAL   :  75 files  (files 351-425)
+TEST  :  75 files  (files 426-500)
+
+Total files: 500
+
+Overlap check:
+TRAIN VS VAL: 0
+TRAIN VS TEST: 0
+VAL VS TEST: 0
+
+Distance: 12m
+Class: Phantom 4 Pro
+
+TRAIN : 350 files  (files 001-350)
+VAL   :  75 files  (files 351-425)
+TEST  :  75 files  (files 426-500)
+
+Total files: 500
+
+Overlap check:
+TRAIN VS VAL: 0
+TRAIN VS TEST: 0
+VAL VS TEST: 0
+============================================================
+
+Distance: 14m
+Class: Inspire 2
+
+TRAIN : 350 files  (files 001-350)
+VAL   :  75 files  (files 351-425)
+TEST  :  75 files  (files 426-500)
+
+Total files: 500
+
+Overlap check:
+TRAIN VS VAL: 0
+TRAIN VS TEST: 0
+VAL VS TEST: 0
+
+Distance: 14m
+Class: Matrice 30
+
+TRAIN : 350 files  (files 001-350)
+VAL   :  75 files  (files 351-425)
+TEST  :  75 files  (files 426-500)
+
+Total files: 500
+
+Overlap check:
+TRAIN VS VAL: 0
+TRAIN VS TEST: 0
+VAL VS TEST: 0
+
+Distance: 14m
+Class: Mavic 2 Pro
+
+TRAIN : 350 files  (files 001-350)
+VAL   :  75 files  (files 351-425)
+TEST  :  75 files  (files 426-500)
+
+Total files: 500
+
+Overlap check:
+TRAIN VS VAL: 0
+TRAIN VS TEST: 0
+VAL VS TEST: 0
+
+Distance: 14m
+Class: Phantom 4 Pro
+
+TRAIN : 350 files  (files 001-350)
+VAL   :  75 files  (files 351-425)
+TEST  :  75 files  (files 426-500)
+
+Total files: 500
+
+Overlap check:
+TRAIN VS VAL: 0
+TRAIN VS TEST: 0
+VAL VS TEST: 0
+============================================================
+
+Distance: 16m
+Class: Inspire 2
+
+TRAIN : 350 files  (files 001-350)
+VAL   :  75 files  (files 351-425)
+TEST  :  75 files  (files 426-500)
+
+Total files: 500
+
+Overlap check:
+TRAIN VS VAL: 0
+TRAIN VS TEST: 0
+VAL VS TEST: 0
+
+Distance: 16m
+Class: Matrice 30
+
+TRAIN : 350 files  (files 001-350)
+VAL   :  75 files  (files 351-425)
+TEST  :  75 files  (files 426-500)
+
+Total files: 500
+
+Overlap check:
+TRAIN VS VAL: 0
+TRAIN VS TEST: 0
+VAL VS TEST: 0
+
+Distance: 16m
+Class: Mavic 2 Pro
+
+TRAIN : 350 files  (files 001-350)
+VAL   :  75 files  (files 351-425)
+TEST  :  75 files  (files 426-500)
+
+Total files: 500
+
+Overlap check:
+TRAIN VS VAL: 0
+TRAIN VS TEST: 0
+VAL VS TEST: 0
+
+Distance: 16m
+Class: Phantom 4 Pro
+
+TRAIN : 350 files  (files 001-350)
+VAL   :  75 files  (files 351-425)
+TEST  :  75 files  (files 426-500)
+
+Total files: 500
+
+Overlap check:
+TRAIN VS VAL: 0
+TRAIN VS TEST: 0
+VAL VS TEST: 0
+============================================================
+
+Distance: 18m
+Class: Inspire 2
+
+TRAIN : 350 files  (files 001-350)
+VAL   :  75 files  (files 351-425)
+TEST  :  75 files  (files 426-500)
+
+Total files: 500
+
+Overlap check:
+TRAIN VS VAL: 0
+TRAIN VS TEST: 0
+VAL VS TEST: 0
+
+Distance: 18m
+Class: Matrice 30
+
+TRAIN : 350 files  (files 001-350)
+VAL   :  75 files  (files 351-425)
+TEST  :  75 files  (files 426-500)
+
+Total files: 500
+
+Overlap check:
+TRAIN VS VAL: 0
+TRAIN VS TEST: 0
+VAL VS TEST: 0
+
+Distance: 18m
+Class: Mavic 2 Pro
+
+TRAIN : 350 files  (files 001-350)
+VAL   :  75 files  (files 351-425)
+TEST  :  75 files  (files 426-500)
+
+Total files: 500
+
+Overlap check:
+TRAIN VS VAL: 0
+TRAIN VS TEST: 0
+VAL VS TEST: 0
+
+Distance: 18m
+Class: Phantom 4 Pro
+
+TRAIN : 350 files  (files 001-350)
+VAL   :  75 files  (files 351-425)
+TEST  :  75 files  (files 426-500)
+
+Total files: 500
+
+Overlap check:
+TRAIN VS VAL: 0
+TRAIN VS TEST: 0
+VAL VS TEST: 0
+============================================================
+
+Distance: 20m
+Class: Inspire 2
+
+TRAIN : 350 files  (files 001-350)
+VAL   :  75 files  (files 351-425)
+TEST  :  75 files  (files 426-500)
+
+Total files: 500
+
+Overlap check:
+TRAIN VS VAL: 0
+TRAIN VS TEST: 0
+VAL VS TEST: 0
+
+Distance: 20m
+Class: Matrice 30
+
+TRAIN : 350 files  (files 001-350)
+VAL   :  75 files  (files 351-425)
+TEST  :  75 files  (files 426-500)
+
+Total files: 500
+
+Overlap check:
+TRAIN VS VAL: 0
+TRAIN VS TEST: 0
+VAL VS TEST: 0
+
+Distance: 20m
+Class: Mavic 2 Pro
+
+TRAIN : 350 files  (files 001-350)
+VAL   :  75 files  (files 351-425)
+TEST  :  75 files  (files 426-500)
+
+Total files: 500
+
+Overlap check:
+TRAIN VS VAL: 0
+TRAIN VS TEST: 0
+VAL VS TEST: 0
+
+Distance: 20m
+Class: Phantom 4 Pro
+
+TRAIN : 350 files  (files 001-350)
+VAL   :  75 files  (files 351-425)
+TEST  :  75 files  (files 426-500)
+
+Total files: 500
+
+Overlap check:
+TRAIN VS VAL: 0
+TRAIN VS TEST: 0
+VAL VS TEST: 0
+============================================================
+
+Distance: 22m
+Class: Inspire 2
+
+TRAIN : 350 files  (files 001-350)
+VAL   :  75 files  (files 351-425)
+TEST  :  75 files  (files 426-500)
+
+Total files: 500
+
+Overlap check:
+TRAIN VS VAL: 0
+TRAIN VS TEST: 0
+VAL VS TEST: 0
+
+Distance: 22m
+Class: Matrice 30
+
+TRAIN : 350 files  (files 001-350)
+VAL   :  75 files  (files 351-425)
+TEST  :  75 files  (files 426-500)
+
+Total files: 500
+
+Overlap check:
+TRAIN VS VAL: 0
+TRAIN VS TEST: 0
+VAL VS TEST: 0
+
+Distance: 22m
+Class: Mavic 2 Pro
+
+TRAIN : 350 files  (files 001-350)
+VAL   :  75 files  (files 351-425)
+TEST  :  75 files  (files 426-500)
+
+Total files: 500
+
+Overlap check:
+TRAIN VS VAL: 0
+TRAIN VS TEST: 0
+VAL VS TEST: 0
+
+Distance: 22m
+Class: Phantom 4 Pro
+
+TRAIN : 350 files  (files 001-350)
+VAL   :  75 files  (files 351-425)
+TEST  :  75 files  (files 426-500)
+
+Total files: 500
+
+Overlap check:
+TRAIN VS VAL: 0
+TRAIN VS TEST: 0
+VAL VS TEST: 0
+============================================================
+
+Distance: 24m
+Class: Inspire 2
+
+TRAIN : 350 files  (files 001-350)
+VAL   :  75 files  (files 351-425)
+TEST  :  75 files  (files 426-500)
+
+Total files: 500
+
+Overlap check:
+TRAIN VS VAL: 0
+TRAIN VS TEST: 0
+VAL VS TEST: 0
+
+Distance: 24m
+Class: Matrice 30
+
+TRAIN : 350 files  (files 001-350)
+VAL   :  75 files  (files 351-425)
+TEST  :  75 files  (files 426-500)
+
+Total files: 500
+
+Overlap check:
+TRAIN VS VAL: 0
+TRAIN VS TEST: 0
+VAL VS TEST: 0
+
+Distance: 24m
+Class: Mavic 2 Pro
+
+TRAIN : 350 files  (files 001-350)
+VAL   :  75 files  (files 351-425)
+TEST  :  75 files  (files 426-500)
+
+Total files: 500
+
+Overlap check:
+TRAIN VS VAL: 0
+TRAIN VS TEST: 0
+VAL VS TEST: 0
+
+Distance: 24m
+Class: Phantom 4 Pro
+
+TRAIN : 350 files  (files 001-350)
+VAL   :  75 files  (files 351-425)
+TEST  :  75 files  (files 426-500)
+
+Total files: 500
+
+Overlap check:
+TRAIN VS VAL: 0
+TRAIN VS TEST: 0
+VAL VS TEST: 0
+============================================================
+
+Distance: 26m
+Class: Inspire 2
+
+TRAIN : 350 files  (files 001-350)
+VAL   :  75 files  (files 351-425)
+TEST  :  75 files  (files 426-500)
+
+Total files: 500
+
+Overlap check:
+TRAIN VS VAL: 0
+TRAIN VS TEST: 0
+VAL VS TEST: 0
+
+Distance: 26m
+Class: Matrice 30
+
+TRAIN : 350 files  (files 001-350)
+VAL   :  75 files  (files 351-425)
+TEST  :  75 files  (files 426-500)
+
+Total files: 500
+
+Overlap check:
+TRAIN VS VAL: 0
+TRAIN VS TEST: 0
+VAL VS TEST: 0
+
+Distance: 26m
+Class: Mavic 2 Pro
+
+TRAIN : 350 files  (files 001-350)
+VAL   :  75 files  (files 351-425)
+TEST  :  75 files  (files 426-500)
+
+Total files: 500
+
+Overlap check:
+TRAIN VS VAL: 0
+TRAIN VS TEST: 0
+VAL VS TEST: 0
+
+Distance: 26m
+Class: Phantom 4 Pro
+
+TRAIN : 350 files  (files 001-350)
+VAL   :  75 files  (files 351-425)
+TEST  :  75 files  (files 426-500)
+
+Total files: 500
+
+Overlap check:
+TRAIN VS VAL: 0
+TRAIN VS TEST: 0
+VAL VS TEST: 0
+============================================================
+
+Distance: 28m
+Class: Inspire 2
+
+TRAIN : 350 files  (files 001-350)
+VAL   :  75 files  (files 351-425)
+TEST  :  75 files  (files 426-500)
+
+Total files: 500
+
+Overlap check:
+TRAIN VS VAL: 0
+TRAIN VS TEST: 0
+VAL VS TEST: 0
+
+Distance: 28m
+Class: Matrice 30
+
+TRAIN : 350 files  (files 001-350)
+VAL   :  75 files  (files 351-425)
+TEST  :  75 files  (files 426-500)
+
+Total files: 500
+
+Overlap check:
+TRAIN VS VAL: 0
+TRAIN VS TEST: 0
+VAL VS TEST: 0
+
+Distance: 28m
+Class: Mavic 2 Pro
+
+TRAIN : 350 files  (files 001-350)
+VAL   :  75 files  (files 351-425)
+TEST  :  75 files  (files 426-500)
+
+Total files: 500
+
+Overlap check:
+TRAIN VS VAL: 0
+TRAIN VS TEST: 0
+VAL VS TEST: 0
+
+Distance: 28m
+Class: Phantom 4 Pro
+
+TRAIN : 350 files  (files 001-350)
+VAL   :  75 files  (files 351-425)
+TEST  :  75 files  (files 426-500)
+
+Total files: 500
+
+Overlap check:
+TRAIN VS VAL: 0
+TRAIN VS TEST: 0
+VAL VS TEST: 0
+============================================================
+
+Distance: 30m
+Class: Inspire 2
+
+TRAIN : 350 files  (files 001-350)
+VAL   :  75 files  (files 351-425)
+TEST  :  75 files  (files 426-500)
+
+Total files: 500
+
+Overlap check:
+TRAIN VS VAL: 0
+TRAIN VS TEST: 0
+VAL VS TEST: 0
+
+Distance: 30m
+Class: Matrice 30
+
+TRAIN : 350 files  (files 001-350)
+VAL   :  75 files  (files 351-425)
+TEST  :  75 files  (files 426-500)
+
+Total files: 500
+
+Overlap check:
+TRAIN VS VAL: 0
+TRAIN VS TEST: 0
+VAL VS TEST: 0
+
+Distance: 30m
+Class: Mavic 2 Pro
+
+TRAIN : 350 files  (files 001-350)
+VAL   :  75 files  (files 351-425)
+TEST  :  75 files  (files 426-500)
+
+Total files: 500
+
+Overlap check:
+TRAIN VS VAL: 0
+TRAIN VS TEST: 0
+VAL VS TEST: 0
+
+Distance: 30m
+Class: Phantom 4 Pro
+
+TRAIN : 350 files  (files 001-350)
+VAL   :  75 files  (files 351-425)
+TEST  :  75 files  (files 426-500)
+
+Total files: 500
+
+Overlap check:
+TRAIN VS VAL: 0
+TRAIN VS TEST: 0
+VAL VS TEST: 0

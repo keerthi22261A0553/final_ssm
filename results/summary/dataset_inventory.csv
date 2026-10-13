@@ -1,0 +1,76 @@
+distance,class_name,used,total_files,planned_train,planned_val,planned_test,numbering_gaps
+2m,Inspire 2,yes,500,350,75,75,0
+2m,Matrice 30,yes,500,350,75,75,0
+2m,Mavic 2 Pro,yes,500,350,75,75,0
+2m,Phantom 4 Pro,yes,500,350,75,75,0
+2m,Corner Reflector,no (excluded),500,,,,
+4m,Inspire 2,yes,500,350,75,75,0
+4m,Matrice 30,yes,500,350,75,75,0
+4m,Mavic 2 Pro,yes,500,350,75,75,0
+4m,Phantom 4 Pro,yes,500,350,75,75,0
+4m,Corner Reflector,no (excluded),500,,,,
+6m,Inspire 2,yes,500,350,75,75,0
+6m,Matrice 30,yes,500,350,75,75,0
+6m,Mavic 2 Pro,yes,500,350,75,75,0
+6m,Phantom 4 Pro,yes,500,350,75,75,0
+6m,Corner Reflector,no (excluded),500,,,,
+8m,Inspire 2,yes,500,350,75,75,0
+8m,Matrice 30,yes,500,350,75,75,0
+8m,Mavic 2 Pro,yes,500,350,75,75,0
+8m,Phantom 4 Pro,yes,500,350,75,75,0
+8m,Corner Reflector,no (excluded),500,,,,
+10m,Inspire 2,yes,500,350,75,75,0
+10m,Matrice 30,yes,500,350,75,75,0
+10m,Mavic 2 Pro,yes,500,350,75,75,0
+10m,Phantom 4 Pro,yes,500,350,75,75,0
+10m,Corner Reflector,no (excluded),500,,,,
+12m,Inspire 2,yes,500,350,75,75,0
+12m,Matrice 30,yes,500,350,75,75,0
+12m,Mavic 2 Pro,yes,500,350,75,75,0
+12m,Phantom 4 Pro,yes,500,350,75,75,0
+12m,Corner Reflector,no (excluded),500,,,,
+14m,Inspire 2,yes,500,350,75,75,0
+14m,Matrice 30,yes,500,350,75,75,0
+14m,Mavic 2 Pro,yes,500,350,75,75,0
+14m,Phantom 4 Pro,yes,500,350,75,75,0
+14m,Corner Reflector,no (excluded),500,,,,
+16m,Inspire 2,yes,500,350,75,75,0
+16m,Matrice 30,yes,500,350,75,75,0
+16m,Mavic 2 Pro,yes,500,350,75,75,0
+16m,Phantom 4 Pro,yes,500,350,75,75,0
+16m,Corner Reflector,no (excluded),500,,,,
+18m,Inspire 2,yes,500,350,75,75,0
+18m,Matrice 30,yes,500,350,75,75,0
+18m,Mavic 2 Pro,yes,500,350,75,75,0
+18m,Phantom 4 Pro,yes,500,350,75,75,0
+18m,Corner Reflector,no (excluded),500,,,,
+20m,Inspire 2,yes,500,350,75,75,0
+20m,Matrice 30,yes,500,350,75,75,0
+20m,Mavic 2 Pro,yes,500,350,75,75,0
+20m,Phantom 4 Pro,yes,500,350,75,75,0
+20m,Corner Reflector,no (excluded),500,,,,
+22m,Inspire 2,yes,500,350,75,75,0
+22m,Matrice 30,yes,500,350,75,75,0
+22m,Mavic 2 Pro,yes,500,350,75,75,0
+22m,Phantom 4 Pro,yes,500,350,75,75,0
+22m,Corner Reflector,no (excluded),500,,,,
+24m,Inspire 2,yes,500,350,75,75,0
+24m,Matrice 30,yes,500,350,75,75,0
+24m,Mavic 2 Pro,yes,500,350,75,75,0
+24m,Phantom 4 Pro,yes,500,350,75,75,0
+24m,Corner Reflector,no (excluded),500,,,,
+26m,Inspire 2,yes,500,350,75,75,0
+26m,Matrice 30,yes,500,350,75,75,0
+26m,Mavic 2 Pro,yes,500,350,75,75,0
+26m,Phantom 4 Pro,yes,500,350,75,75,0
+26m,Corner Reflector,no (excluded),500,,,,
+28m,Inspire 2,yes,500,350,75,75,0
+28m,Matrice 30,yes,500,350,75,75,0
+28m,Mavic 2 Pro,yes,500,350,75,75,0
+28m,Phantom 4 Pro,yes,500,350,75,75,0
+28m,Corner Reflector,no (excluded),500,,,,
+30m,Inspire 2,yes,500,350,75,75,0
+30m,Matrice 30,yes,500,350,75,75,0
+30m,Mavic 2 Pro,yes,500,350,75,75,0
+30m,Phantom 4 Pro,yes,500,350,75,75,0
+30m,Corner Reflector,no (excluded),500,,,,

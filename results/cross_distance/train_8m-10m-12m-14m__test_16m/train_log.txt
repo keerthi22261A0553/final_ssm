@@ -1,0 +1,32 @@
+
+=== Cross-distance: train 8m, 10m, 12m, 14m -> test 16m ===
+Loading train and validation files of the training distances only...
+    8m: train 1400 files / 22400 segments, val 300 files / 4800 segments
+   10m: train 1400 files / 22400 segments, val 300 files / 4800 segments
+   12m: train 1400 files / 22400 segments, val 300 files / 4800 segments
+   14m: train 1400 files / 22400 segments, val 300 files / 4800 segments
+  built in 89 s
+Model parameters: 129,812
+
+Epoch | Train loss  acc  | Val loss  acc   | LR      | Time  | Note
+    1 | 0.0784  0.9700 | 0.1102  0.9652 | 1.0e-03 | 1062s | saved best
+    2 | 0.0189  0.9940 | 0.0582  0.9770 | 1.0e-03 | 1038s | saved best
+    3 | 0.0134  0.9957 | 0.1877  0.9464 | 1.0e-03 | 1026s | no improvement 1/7
+    4 | 0.0112  0.9962 | 0.0537  0.9833 | 1.0e-03 |  998s | saved best
+    5 | 0.0084  0.9972 | 0.0529  0.9796 | 1.0e-03 | 1000s | saved best
+    6 | 0.0077  0.9975 | 0.0621  0.9772 | 1.0e-03 |  984s | no improvement 1/7
+    7 | 0.0067  0.9978 | 0.2971  0.9286 | 1.0e-03 |  979s | no improvement 2/7
+    8 | 0.0065  0.9982 | 0.0373  0.9872 | 1.0e-03 |  995s | saved best
+    9 | 0.0051  0.9983 | 0.0249  0.9907 | 1.0e-03 | 1030s | saved best
+   10 | 0.0044  0.9986 | 0.0178  0.9934 | 1.0e-03 | 1019s | saved best
+   11 | 0.0047  0.9986 | 0.0562  0.9807 | 1.0e-03 | 1006s | no improvement 1/7
+   12 | 0.0046  0.9985 | 0.1160  0.9727 | 1.0e-03 |  999s | no improvement 2/7
+   13 | 0.0040  0.9987 | 0.0933  0.9718 | 1.0e-03 | 1004s | no improvement 3/7
+   14 | 0.0012  0.9996 | 0.1223  0.9652 | 5.0e-04 | 1106s | no improvement 4/7
+   15 | 0.0017  0.9995 | 0.0278  0.9907 | 5.0e-04 | 1266s | no improvement 5/7
+   16 | 0.0011  0.9996 | 0.1066  0.9734 | 5.0e-04 | 1130s | no improvement 6/7
+   17 | 0.0005  0.9998 | 0.0323  0.9912 | 2.5e-04 | 1096s | no improvement 7/7
+
+Early stopping after epoch 17.
+Best epoch 10: val loss 0.0178, val acc 0.9934
+Checkpoint: checkpoints/cross_distance/train_8m-10m-12m-14m__test_16m/best.pt

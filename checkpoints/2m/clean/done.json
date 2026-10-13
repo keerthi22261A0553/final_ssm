@@ -1,0 +1,8 @@
+{
+  "distance": "2m",
+  "best_epoch": 1,
+  "best_val_loss": 0.0028874531357966286,
+  "best_val_acc": 0.998125,
+  "epochs_run": 8,
+  "split_fingerprint": "b8acc9cfd200a55324501b2dfde4a63109569eb0256ea1517f2c34b5074fcde4"
+}

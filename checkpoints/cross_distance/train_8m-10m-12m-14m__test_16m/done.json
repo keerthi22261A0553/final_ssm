@@ -1,0 +1,14 @@
+{
+  "distance": [
+    "8m",
+    "10m",
+    "12m",
+    "14m"
+  ],
+  "run_name": "cross_distance",
+  "best_epoch": 10,
+  "best_val_loss": 0.017807636667587497,
+  "best_val_acc": 0.9934375,
+  "epochs_run": 17,
+  "split_fingerprint": "7c8796ec374d37ce4f263c1559162ee298cb89ac2b7a6627b3c143eee8c76eb4"
+}

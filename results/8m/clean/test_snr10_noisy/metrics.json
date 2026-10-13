@@ -1,0 +1,136 @@
+{
+  "segment_level": {
+    "count": 4800,
+    "accuracy": 0.8658333333333333,
+    "precision_macro": 0.8896485139274575,
+    "recall_macro": 0.8658333333333333,
+    "f1_macro": 0.8607821340210698,
+    "confusion_matrix": [
+      [
+        1200,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1034,
+        163,
+        3
+      ],
+      [
+        0,
+        0,
+        1200,
+        0
+      ],
+      [
+        1,
+        229,
+        248,
+        722
+      ]
+    ],
+    "per_class": {
+      "Inspire 2": {
+        "precision": 0.9991673605328892,
+        "recall": 1.0,
+        "f1": 0.9995835068721366,
+        "support": 1200
+      },
+      "Matrice 30": {
+        "precision": 0.8186856690419636,
+        "recall": 0.8616666666666667,
+        "f1": 0.8396264717823793,
+        "support": 1200
+      },
+      "Mavic 2 Pro": {
+        "precision": 0.74487895716946,
+        "recall": 1.0,
+        "f1": 0.8537886872998933,
+        "support": 1200
+      },
+      "Phantom 4 Pro": {
+        "precision": 0.9958620689655172,
+        "recall": 0.6016666666666667,
+        "f1": 0.7501298701298701,
+        "support": 1200
+      }
+    }
+  },
+  "file_level": {
+    "count": 300,
+    "accuracy": 0.9133333333333333,
+    "precision_macro": 0.9252008032128515,
+    "recall_macro": 0.9133333333333333,
+    "f1_macro": 0.9098452379873689,
+    "confusion_matrix": [
+      [
+        75,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        72,
+        3,
+        0
+      ],
+      [
+        0,
+        0,
+        75,
+        0
+      ],
+      [
+        0,
+        11,
+        12,
+        52
+      ]
+    ],
+    "per_class": {
+      "Inspire 2": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 75
+      },
+      "Matrice 30": {
+        "precision": 0.8674698795180723,
+        "recall": 0.96,
+        "f1": 0.9113924050632911,
+        "support": 75
+      },
+      "Mavic 2 Pro": {
+        "precision": 0.8333333333333334,
+        "recall": 1.0,
+        "f1": 0.9090909090909091,
+        "support": 75
+      },
+      "Phantom 4 Pro": {
+        "precision": 1.0,
+        "recall": 0.6933333333333334,
+        "f1": 0.8188976377952756,
+        "support": 75
+      }
+    }
+  },
+  "distance": "8m",
+  "condition": "noisy",
+  "snr_db": 10,
+  "snr_definition": "complex AWGN added to a copy of each raw test signal; SNR relative to the target (micro-Doppler) power after zero-Doppler shift and DC removal; seed per (file, SNR) from RANDOM_SEED",
+  "denoiser": null,
+  "model": "clean",
+  "checkpoint_epoch": 7,
+  "split_fingerprint": "91ce132dd96402320a667e6c4481a11de9e23bead3684c5b5248548056992cc0",
+  "test_files": 300,
+  "test_segments": 4800,
+  "class_names": [
+    "Inspire 2",
+    "Matrice 30",
+    "Mavic 2 Pro",
+    "Phantom 4 Pro"
+  ]
+}

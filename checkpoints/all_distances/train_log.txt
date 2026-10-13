@@ -1,0 +1,60 @@
+
+=== All-distance model: 2m, 4m, 6m, 8m, 10m, 12m, 14m, 16m, 18m, 20m, 22m, 24m, 26m, 28m, 30m ===
+Loading train and validation files of every distance (no test files)...
+    2m train: 1400 files, 22400 segments
+    4m train: 1400 files, 22400 segments
+    6m train: 1400 files, 22400 segments
+    8m train: 1400 files, 22400 segments
+   10m train: 1400 files, 22400 segments
+   12m train: 1400 files, 22400 segments
+   14m train: 1400 files, 22400 segments
+   16m train: 1400 files, 22400 segments
+   18m train: 1400 files, 22400 segments
+   20m train: 1400 files, 22400 segments
+   22m train: 1400 files, 22400 segments
+   24m train: 1400 files, 22400 segments
+   26m train: 1400 files, 22400 segments
+   28m train: 1400 files, 22400 segments
+   30m train: 1400 files, 22400 segments
+    2m val: 300 files, 4800 segments
+    4m val: 300 files, 4800 segments
+    6m val: 300 files, 4800 segments
+    8m val: 300 files, 4800 segments
+   10m val: 300 files, 4800 segments
+   12m val: 300 files, 4800 segments
+   14m val: 300 files, 4800 segments
+   16m val: 300 files, 4800 segments
+   18m val: 300 files, 4800 segments
+   20m val: 300 files, 4800 segments
+   22m val: 300 files, 4800 segments
+   24m val: 300 files, 4800 segments
+   26m val: 300 files, 4800 segments
+   28m val: 300 files, 4800 segments
+   30m val: 300 files, 4800 segments
+  total: train 336000 segments, val 72000 segments, built in 317 s
+Model parameters: 129,812
+
+Epoch | Train loss  acc  | Val loss  acc   | LR      | Time  | Note
+    1 | 0.0903  0.9661 | 0.1681  0.9497 | 1.0e-03 | 4265s | saved best
+    2 | 0.0273  0.9910 | 0.0982  0.9756 | 1.0e-03 | 4365s | saved best
+    3 | 0.0190  0.9938 | 0.0936  0.9698 | 1.0e-03 | 59567s | saved best
+    4 | 0.0154  0.9950 | 0.0500  0.9835 | 1.0e-03 | 4356s | saved best
+    5 | 0.0131  0.9958 | 0.0810  0.9741 | 1.0e-03 | 4201s | no improvement 1/7
+    6 | 0.0116  0.9963 | 0.0475  0.9844 | 1.0e-03 | 4148s | saved best
+    7 | 0.0105  0.9966 | 0.1282  0.9659 | 1.0e-03 | 4238s | no improvement 1/7
+    8 | 0.0099  0.9968 | 0.0572  0.9811 | 1.0e-03 | 4355s | no improvement 2/7
+    9 | 0.0092  0.9969 | 0.1026  0.9759 | 1.0e-03 | 6460s | no improvement 3/7
+   10 | 0.0045  0.9985 | 0.0660  0.9808 | 5.0e-04 | 3986s | no improvement 4/7
+   11 | 0.0043  0.9985 | 0.0442  0.9873 | 5.0e-04 | 4025s | saved best
+   12 | 0.0040  0.9987 | 0.0302  0.9905 | 5.0e-04 | 3928s | saved best
+   13 | 0.0039  0.9987 | 0.0547  0.9823 | 5.0e-04 | 3935s | no improvement 1/7
+   14 | 0.0039  0.9986 | 0.0474  0.9864 | 5.0e-04 | 3951s | no improvement 2/7
+   15 | 0.0038  0.9987 | 0.0390  0.9882 | 5.0e-04 | 3875s | no improvement 3/7
+   16 | 0.0020  0.9994 | 0.0480  0.9878 | 2.5e-04 | 3885s | no improvement 4/7
+   17 | 0.0019  0.9994 | 0.0634  0.9842 | 2.5e-04 | 3943s | no improvement 5/7
+   18 | 0.0016  0.9994 | 0.0391  0.9897 | 2.5e-04 | 3908s | no improvement 6/7
+   19 | 0.0007  0.9998 | 0.0560  0.9878 | 1.3e-04 | 3944s | no improvement 7/7
+
+Early stopping after epoch 19.
+Best epoch 12: val loss 0.0302, val acc 0.9905
+Checkpoint: checkpoints/all_distances/best.pt
